@@ -1,0 +1,41 @@
+{
+  "source": "UCI red-wine chemistry matched by original row order to grouped seed-0 OOF interventions",
+  "n_total": 1599,
+  "labels_original_order_match": true,
+  "number_of_mismatches": 0,
+  "n_unique_chemistry_vectors": 1359,
+  "method": "Spearman midrank correlation between original measurement and signed J_k",
+  "features": [
+    {
+      "feature": "alcohol",
+      "rho_all": 0.7229597504891413,
+      "rho_pair_5_vs_6": 0.6506188637940041
+    },
+    {
+      "feature": "sulphates",
+      "rho_all": 0.5971623376783829,
+      "rho_pair_5_vs_6": 0.5409382106832982
+    },
+    {
+      "feature": "volatile acidity",
+      "rho_all": -0.5494095103932302,
+      "rho_pair_5_vs_6": -0.46809820126161084
+    },
+    {
+      "feature": "total sulfur dioxide",
+      "rho_all": -0.46742625430865115,
+      "rho_pair_5_vs_6": -0.5073273916061685
+    },
+    {
+      "feature": "chlorides",
+      "rho_all": -0.18552733312029404,
+      "rho_pair_5_vs_6": -0.145948952832982
+    },
+    {
+      "feature": "pH",
+      "rho_all": -0.05614780779457563,
+      "rho_pair_5_vs_6": -0.046311041148723725
+    }
+  ],
+  "n_pair_5_vs_6": 1304
+}

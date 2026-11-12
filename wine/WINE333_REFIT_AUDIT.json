@@ -1,0 +1,14 @@
+{
+  "source": "Independent numerical refit of class-contrast equations on the original fold-4 training set; not an extraction from a figure",
+  "n_terms": 12,
+  "unique_rows": 12,
+  "refit_Q": 1.1842129460772683,
+  "archived_Q": 1.1841931021293028,
+  "absolute_difference_refit_vs_archived": 0.00001984394796550326,
+  "class_pair": [
+    5,
+    6
+  ],
+  "fold_id": 4,
+  "identical_neighbour_set_to_archive": true
+}
