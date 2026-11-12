@@ -1,0 +1,40 @@
+=== FEATURE STABILITY seed=0 ===
+seed=0 query 25/171
+seed=0 query 50/171
+seed=0 query 75/171
+seed=0 query 100/171
+seed=0 query 125/171
+seed=0 query 150/171
+=== FEATURE STABILITY seed=1 ===
+seed=1 query 25/171
+seed=1 query 50/171
+seed=1 query 75/171
+seed=1 query 100/171
+seed=1 query 125/171
+seed=1 query 150/171
+=== FEATURE STABILITY seed=2 ===
+seed=2 query 25/171
+seed=2 query 50/171
+seed=2 query 75/171
+seed=2 query 100/171
+seed=2 query 125/171
+seed=2 query 150/171
+=== FEATURE STABILITY seed=3 ===
+seed=3 query 25/171
+seed=3 query 50/171
+seed=3 query 75/171
+seed=3 query 100/171
+seed=3 query 125/171
+seed=3 query 150/171
+=== FEATURE STABILITY seed=4 ===
+seed=4 query 25/171
+seed=4 query 50/171
+seed=4 query 75/171
+seed=4 query 100/171
+seed=4 query 125/171
+seed=4 query 150/171
+
+=== FINAL FIELD-ONLY FEATURE STABILITY ===
+Spearman mean=0.724494 median=0.726808
+Top5 Jaccard mean=0.571429
+Mean-vs-median aggregate Spearman=0.948387 Top5=0.666667
