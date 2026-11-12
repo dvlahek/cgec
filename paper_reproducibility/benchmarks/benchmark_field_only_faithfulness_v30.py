@@ -13,7 +13,7 @@ from mcgc import MultiAgentChemotacticGraphClassifier
 from mcgc.xai import explain_mcgc
 
 ROOT = Path(__file__).resolve().parents[1]
-PARENT = ROOT / "examples" / "benchmark_xai_faithfulness_v09quater_signed.py"
+PARENT = ROOT.parent / "examples" / "benchmark_xai_faithfulness_v09quater_signed.py"
 
 def load_module(path: Path, name: str):
     spec = importlib.util.spec_from_file_location(name, path)

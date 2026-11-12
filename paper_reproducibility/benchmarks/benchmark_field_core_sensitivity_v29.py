@@ -14,7 +14,7 @@ from mcgc import MultiAgentChemotacticGraphClassifier, reliability_features
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PARENT = ROOT / "examples" / "benchmark_tuned_selective_v12.py"
+PARENT = ROOT.parent / "examples" / "benchmark_tuned_selective_v12.py"
 
 # Frozen one-factor-at-a-time sensitivity protocol.
 # No configuration is selected from these results.

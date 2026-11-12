@@ -12,7 +12,7 @@ from scipy.stats import spearmanr
 from mcgc import MultiAgentChemotacticGraphClassifier
 
 ROOT = Path(__file__).resolve().parents[1]
-V17_SCRIPT = ROOT / "examples" / "benchmark_feature_attribution_v17.py"
+V17_SCRIPT = ROOT.parent / "examples" / "benchmark_feature_attribution_v17.py"
 
 def load_module(path: Path, name: str):
     spec = importlib.util.spec_from_file_location(name, path)

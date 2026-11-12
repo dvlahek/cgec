@@ -8,7 +8,7 @@ from pathlib import Path
 from mcgc import MultiAgentChemotacticGraphClassifier
 
 ROOT = Path(__file__).resolve().parents[1]
-PARENT = ROOT / "examples" / "benchmark_xai_stability_v15ter_tail.py"
+PARENT = ROOT.parent / "examples" / "benchmark_xai_stability_v15ter_tail.py"
 
 def load_module(path: Path, name: str):
     spec = importlib.util.spec_from_file_location(name, path)
