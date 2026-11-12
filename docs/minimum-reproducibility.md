@@ -28,11 +28,13 @@ Keep `validation/` as a local audit folder; do not commit the environment snapsh
 | Table 3 — eight real datasets, fixed and tuned CGEC | Benchmark sources under `paper_reproducibility/benchmarks/` | **Recover the final dataset-by-seed or dataset-mean numerical outputs** and trace them to the reported values | Full final source artifact not yet in this repository |
 | Tables 4 and 5 — label review and rival recovery | Original label-review scripts, October `final_manuscript_results.json` and `lr_rival_margin_control_analysis.json` | **Recover the later corrected OOF result archive** and independently check the table means, denominators and statistical adjustments | October summary does not match the November tables |
 | Figure 3 — path stability and delete/refit | `figure_inputs.json` and original experiment scripts | Match stored aggregates and exact directional tests to the figure and Section 6 | Archived aggregates agree with the PDF |
-| Section 6.4 — feature interventions | `final_manuscript_results.json` and feature-stability script | Match the archived Spearman/Jaccard summary to the prose | Archived aggregates agree with the PDF |
+| Section 6.4 — feature interventions | `final_manuscript_results.json`, `reproductions/feature_stability_v30/` and feature-stability script | No further run needed; preserve validated local output and source context | **Reproduced on seeds 0–4; statistics match at reported precision** |
 | Wine Section 7, Figures 5–6 and Table 6 | `wine/source_wine_seed0/`, frozen strata, wine-333 contributions, original UCI data | No additional seed-0 run needed; preserve user-verified logs | Seed-0 correlations, strata and independent refit reproduced |
 | Supplementary material | Supporting source and summaries | Verify each nontrivial numeric claim against a named file before final release | Coverage is partial; record unresolved source gaps |
 
 **Important:** Matching an archived aggregate against the manuscript is a *consistency check*, not an independent repeat of the underlying experiment.
+
+A complete local feature-stability re-execution was received on 12 November 2026 and deposited under [`reproductions/feature_stability_v30/`](../reproductions/feature_stability_v30/). Its 5 seeds and 10 pairwise comparisons reproduce the reference summaries. No additional feature-stability execution is required.
 
 ## 3. Specific unresolved discrepancy — latest label-review tables
 
