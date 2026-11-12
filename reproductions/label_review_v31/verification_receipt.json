@@ -1,0 +1,39 @@
+{
+  "artifact": "v3.1 strict OOF label-review full-source verification receipt",
+  "verification_date": "2026-11-12",
+  "evidence": "Author-provided PowerShell console output from scripts/verify_v31_full_artifact.py; original full JSON bytes not uploaded to this repository",
+  "original_path": "C:\\Articles\\Clanci\\MCGC-new-repo\\paper_reproducibility\\results\\v31_strict_oof_scaling_audit.json",
+  "original_size_bytes": 1469272,
+  "original_sha256": "530f9599d945dd895cc2d155b81020e7488a58dcd7369c36c8d362fb7cbc692e",
+  "source_check": "PASS",
+  "table5_corrupted_counts": {
+    "CGEC": {
+      "top5": 6173,
+      "top10": 11549
+    },
+    "RF_confidence": {
+      "top5": 6444,
+      "top10": 12147
+    },
+    "LR_confidence": {
+      "top5": 6192,
+      "top10": 11796
+    },
+    "LR_rival_margin": {
+      "top5": 5866,
+      "top10": 10938
+    },
+    "kNN_disagreement": {
+      "top5": 5681,
+      "top10": 10961
+    },
+    "Label_Spreading": {
+      "top5": 6059,
+      "top10": 11559
+    }
+  },
+  "total_counts_checked": 12,
+  "dataset_level_mean_rates": "PASS",
+  "full_json_committed": false,
+  "next_action": "Deposit SHA-256-verified full original audit file unchanged; no new training required."
+}

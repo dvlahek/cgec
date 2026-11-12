@@ -20,7 +20,7 @@ PDF: `main(20261112-085144).pdf`, Table 4 on page 14 and Table 5 on page 15.
 | Table 5, 6 methods × 3 mean recovery metrics | 18 of 18 | Exact match at printed precision |
 | CGEC–kNN dataset-level ROC-AUC and PR-AUC | Both 10 wins, 2 losses | Exact two-sided p = 0.03857421875 each |
 | Six primary Table 5 top-budget tests | Four 8/0, two 6/2 | Raw and Holm values match the v3.1 summary |
-| Table 5 pooled corrupted-case denominators | 12 integers in manuscript; **not present in v3.1 compact source** | Requires full original JSON |
+| Table 5 pooled corrupted-case denominators | 12 integers in manuscript; recovered from the full original JSON | All 12 match; local verifier and SHA-256 passed |
 
 At the printed precision the six Table 5 recovery vectors are:
 
@@ -37,7 +37,7 @@ At the printed precision the six Table 5 recovery vectors are:
 
 The six specified Table 5 top-budget comparisons use Holm across six tests: four adjusted p-values `0.046875` and two adjusted p-values `0.578125`, consistent with the manuscript.
 
-## Exact missing source artifact
+## Original source artifact — verified locally
 
 The full archived audit is named:
 
@@ -46,19 +46,19 @@ The full archived audit is named:
 - Expected original length: **1,469,272 bytes**
 - Expected SHA-256: **`530f9599d945dd895cc2d155b81020e7488a58dcd7369c36c8d362fb7cbc692e`**
 
-Its name, length and checksum are recorded in the v3.1 summary. **The full file is not present in this repository.** Without it, the 12 `n_corr` denominators in Table 5 and independent recomputation of all original unit-level aggregates cannot be certified.
+Its name, length and checksum are recorded in the v3.1 summary. On 12 November 2026 the author located the original file on the local Windows machine and executed the no-training verifier. The supplied console output confirms **SOURCE PASS**, exact SHA-256, all **12** pooled `n_corr` denominators, and independently recomputed equal-dataset recovery rates. The 160 selected eight-multiclass dataset × condition × seed records were verified as part of this run. **The original full file has not yet been committed to this repository.** Keep the file unchanged for archival deposit; the summary and the verification receipt are not substitutes for distributing its raw contents.
 
-Locate the original file on the experiment machine. From PowerShell:
+Original source location (the verified local machine). For future independent rechecks, use:
 
 ```powershell
 Get-ChildItem "C:\Articles\Clanci\MCGC-new-repo" -Recurse -File -Filter "v31_strict_oof_scaling_audit.json" |
   Select-Object FullName,Length
 
 # Check the discovered file, substituting its true full path:
-Get-FileHash "FULL_PATH_TO\v31_strict_oof_scaling_audit.json" -Algorithm SHA256
+Get-FileHash "C:\Articles\Clanci\MCGC-new-repo\paper_reproducibility\results\v31_strict_oof_scaling_audit.json" -Algorithm SHA256
 
 # No training: check exact full source and all 12 printed Table 5 denominators
-.\.venv\Scripts\python.exe scripts\verify_v31_full_artifact.py --raw "FULL_PATH_TO\v31_strict_oof_scaling_audit.json"
+.\.venv\Scripts\python.exe scripts\verify_v31_full_artifact.py --raw "C:\Articles\Clanci\MCGC-new-repo\paper_reproducibility\results\v31_strict_oof_scaling_audit.json"
 ```
 
 The verifier checks SHA-256, all 12 pooled denominators, and recomputes each equal-dataset mean from the unit-level counts. It does **not** train any model.
@@ -66,7 +66,8 @@ The verifier checks SHA-256, all 12 pooled denominators, and recomputes each equ
 ## Release decision
 
 - **Matched:** Table 4 reported means; Table 5 reported means; exact sign-test and six-test Holm arithmetic.
-- **Pending raw evidence:** all 12 Table 5 pooled denominators and the underlying dataset-condition-seed records.
-- **No full rerun needed if the original JSON can be located and passes checksum validation.**
+- **Matched with original full JSON on the local machine:** all 12 Table 5 pooled denominators and equal-dataset recovery rates, with the recorded source SHA-256.
+- **Pending repository archival:** deposit the already verified full JSON unchanged (the full file is currently only on the local machine).
+- **No further label-review training required** for this verification.
 
 Keep October `final_manuscript_results.json` as historical evidence; it is not the authoritative Table 4/5 source for the November manuscript.

@@ -29,13 +29,13 @@ The `src/mcgc/` package provides compatibility for the original benchmark script
 | Wine five grouped seeds | Analysis code, partial exports | Only seed 0 currently available | Incomplete |
 | Nonlinear twelve-seed prediction | Benchmark scripts included | Full original run records and baseline outputs not deposited | Incomplete |
 | Real-data eight-dataset panel | Benchmark/tuning scripts included | Full dataset caches and seed-level outputs not deposited | Incomplete |
-| PMLB label review | v3.1 strict-OOF source, summary and tests included | Table 4 (24 values), Table 5 (18 mean values), six Holm tests matched; original full audit JSON absent | Partial: 12 pooled Table 5 denominators still pending |
+| PMLB label review | v3.1 strict-OOF source, summary, original locally verified file and tests | Table 4 (24 values), Table 5 (18 means), all 12 denominators, six Holm tests checked | **Verified locally**; original full audit needs repository deposit |
 | Path and feature stability | Source scripts included | Only selected numerical summaries included | Incomplete |
 | Figures | Generation scripts and selected numerical inputs included | Not every final figure data source supplied | Incomplete |
 
 ## Paper version
 
-The archived `paper_reproducibility/results/final_manuscript_results.json` was prepared before the November 2026 manuscript edits and is not the authoritative source for the final Table 4/5 results. Those **42 printed means** match `paper_reproducibility/results/v31_strict_oof_scaling_audit_summary.json` exactly. See [label-review audit](label-review-audit.md) for the remaining original full-JSON requirement and exact checksum.
+The archived `paper_reproducibility/results/final_manuscript_results.json` was prepared before the November 2026 manuscript edits and is not the authoritative source for the final Table 4/5 results. Those **42 printed means** match `paper_reproducibility/results/v31_strict_oof_scaling_audit_summary.json` exactly. The full v3.1 source JSON has been SHA-256 verified locally and all 12 pooled Table 5 denominators checked; see [label-review audit](label-review-audit.md). The original full file is not yet deposited in Git.
 
 ## Required for a full release
 
