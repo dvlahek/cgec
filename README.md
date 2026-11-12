@@ -34,7 +34,18 @@ python -m pytest
 python wine/verify_available_wine_evidence.py
 ```
 
-For the chemical measurements, obtain the unmodified `winequality-red.csv` from the [UCI Wine Quality data](https://archive.ics.uci.edu/dataset/186/wine+quality). Do not reorder its records.
+For the chemical measurements, use the unmodified original UCI table. Do not reorder its records.
+
+### Download the original UCI Wine data (PowerShell)
+
+The original `winequality-red.csv` is not tracked by this repository. The analysis scripts require it at `wine/winequality-red.csv` when using the example commands below. From the repository root, run:
+
+```powershell
+Invoke-WebRequest -Uri "https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv" -OutFile "wine/winequality-red.csv"
+Test-Path "wine/winequality-red.csv"
+```
+
+The file contains 1,599 observations plus a header row. Keep its original order and semicolon-separated format.
 
 ```bash
 python wine/verify_wine_direction.py --uci-csv /path/to/winequality-red.csv
