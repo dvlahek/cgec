@@ -4,13 +4,13 @@
 
 Install from the project root.
 
-\`\`\`bash
+```bash
 python -m venv .venv
 python -m pip install -e ".[dev]"
 python -m pytest
-\`\`\`
+```
 
-Record the Python interpreter, operating system, source commit and all package versions when regenerating numerical results. Dependency minimums in \`pyproject.toml\` are not an environment lock.
+Record the Python interpreter, operating system, source commit and all package versions when regenerating numerical results. Dependency minimums in `pyproject.toml` are not an environment lock.
 
 ## Available checks
 
