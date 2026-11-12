@@ -1,16 +1,27 @@
-# Contrastive Graph-Evidence Classifier (CGEC)
+# Contrastive Graph-Evidence Classifier
 
-Research code and numerical evidence for the manuscript **Graph-Evidence Classification for Intrinsic Explanation and Training-Label Review**.
+Source code and numerical evidence for *Graph-Evidence Classification for Intrinsic Explanation and Training-Label Review*.
 
-CGEC is a graph-based classifier that propagates class labels over a locally scaled training graph, uses class-versus-rival evidence for inductive predictions, and provides inspectable neighbor contributions, feature interventions and out-of-fold training-label review.
+CGEC uses a locally scaled training graph and class-contrast diffusion fields for inductive prediction. The same fitted evidence supports exact training-neighbor contributions, deterministic representative graph paths, paired feature interventions and out-of-fold label review.
 
-## Repository status
+## Project layout
 
-The current repository provides a reproducible subset of the red-wine case study: grouped seed-0 out-of-fold exports, grade-oriented intervention analysis, and an independent fold refit for the illustrated wine. The complete multi-seed benchmark suite is **not yet included**. This distinction is reflected in the documentation and must be maintained in any paper availability statement.
+| Path | Contents |
+| --- | --- |
+| [`paper_reproducibility/xai/`](paper_reproducibility/xai/) | Paper-specific field-only CGEC estimator and query explanations |
+| [`paper_reproducibility/benchmarks/`](paper_reproducibility/benchmarks/) | Prediction, feature/path validation, real-data and runtime experiments |
+| [`paper_reproducibility/figures/`](paper_reproducibility/figures/) | Source scripts for figure construction |
+| [`paper_reproducibility/results/`](paper_reproducibility/results/) | Archived numerical summaries and supporting inputs |
+| [`examples/`](examples/) | Baseline comparisons and label-review evaluation scripts |
+| [`src/mcgc/`](src/mcgc/) | Compatibility code required by earlier experimental scripts |
+| [`wine/`](wine/) | Frozen grouped seed-0 Wine exports and independent analysis |
+| [`docs/`](docs/) | Reproduction instructions and current evidence coverage |
 
-## Getting started
+The published method uses **`FieldOnlyCGEC`**, not the stochastic-walker prediction mechanism from the earlier MCGC prototype. Historical benchmark scripts depend on the MCGC package with walkers disabled. The paper classifier is implemented in `paper_reproducibility/xai/field_only_cgec.py`.
 
-Python 3.10 or later is recommended.
+## Installation
+
+Use Python 3.10 or later from the repository root.
 
 ```bash
 git clone https://github.com/dvlahek/cgec.git
@@ -18,34 +29,27 @@ cd cgec
 python -m venv .venv
 # Windows PowerShell: .\.venv\Scripts\Activate.ps1
 # Linux/macOS: source .venv/bin/activate
-python -m pip install -e ".[dev]"
+python -m pip install -e ".[dev,paper]"
 python -m pytest
 python wine/verify_available_wine_evidence.py
 ```
 
-The Wine consistency checks run on archived outputs. Recomputing the chemistry associations and the independent wine-333 model refit additionally requires the original `winequality-red.csv` from the [UCI Wine Quality dataset](https://archive.ics.uci.edu/dataset/186/wine+quality).
+For the chemical measurements, obtain the unmodified `winequality-red.csv` from the [UCI Wine Quality data](https://archive.ics.uci.edu/dataset/186/wine+quality). Do not reorder its records.
 
 ```bash
-python wine/recompute_wine333_from_cgec.py --wine /path/to/winequality-red.csv
+python wine/verify_wine_direction.py --uci-csv /path/to/winequality-red.csv
 python wine/recompute_wine_pair_value_strata.py --uci-csv /path/to/winequality-red.csv
+python wine/recompute_wine333_from_cgec.py --wine /path/to/winequality-red.csv
 ```
 
-## Project layout
+## Reproduction and provenance
 
-| Path | Description |
-| --- | --- |
-| `wine/` | Archived seed-0 exports, scripts, statistics and wine-333 evidence |
-| `tests/` | Automated checks for data alignment and neighbor additivity |
-| `docs/wine.md` | Experimental protocol and scope of the Wine results |
-| `docs/reproducibility.md` | Reproduction instructions and outstanding materials |
-| `paper/` | Manuscript source status and citation guidance |
+The repository includes the original paper-oriented CGEC source and selected archived numerical artifacts from the source branch of `dvlahek/MCGC-new` (commit `5b1fc6af4387d934f3f06a395b563db7a5d1efe3`) as well as verified seed-0 Wine files. They do not yet form a complete frozen recreation of every experiment in the latest manuscript. Some original baseline and multi-seed results, dataset caches and environment details remain to be deposited. The October results lock predates the November manuscript revision and must not be treated as a full independent re-run.
 
-## Publication materials
+See [reproducibility scope](docs/reproducibility.md) and [Wine case-study protocol](docs/wine.md). No publication release, DOI or complete-reproduction claim has yet been assigned.
 
-The entire five-seed Wine study, twelve-seed predictive evaluations, label-review benchmark suite, matching configuration files and environment lock must be added and checked before a full paper reproduction claim is made. This repository should not be confused with the earlier [MCGC walker prototype](https://github.com/dvlahek/MCGC-new).
+## Citation
 
-## Reference
+The manuscript title is *Graph-Evidence Classification for Intrinsic Explanation and Training-Label Review*. Please use the final publication citation after acceptance. The Wine data originate from Cortez et al. (2009), *Decision Support Systems*, 47(4), 547–553.
 
-Cortez, P., Cerdeira, A., Almeida, F., Matos, T., and Reis, J. (2009). Modeling wine preferences by data mining from physicochemical properties. *Decision Support Systems*, 47(4), 547–553.
-
-No software license has been declared yet.
+The repository has no declared software license until the authors select one.

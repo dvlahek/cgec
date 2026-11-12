@@ -5,15 +5,23 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "cgec-reproducibility"
 version = "0.1.0"
-description = "Numerical checks and research materials for graph-evidence classification"
+description = "Code and numerical evidence for graph-evidence classification"
 requires-python = ">=3.10"
-dependencies = ["numpy>=1.24", "pandas>=1.5", "scipy>=1.10", "matplotlib>=3.6"]
+dependencies = [
+    "numpy>=2.0",
+    "pandas>=2.2",
+    "scipy>=1.13",
+    "scikit-learn>=1.5",
+    "matplotlib>=3.9"
+]
 
 [project.optional-dependencies]
+paper = ["cleanlab>=2.7,<3", "pmlb"]
 dev = ["pytest>=7.4"]
 
-[tool.setuptools]
-packages = []
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["mcgc*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
