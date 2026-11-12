@@ -29,13 +29,13 @@ The `src/mcgc/` package provides compatibility for the original benchmark script
 | Wine five grouped seeds | Analysis code, partial exports | Only seed 0 currently available | Incomplete |
 | Nonlinear twelve-seed prediction | Benchmark scripts included | Full original run records and baseline outputs not deposited | Incomplete |
 | Real-data eight-dataset panel | Benchmark/tuning scripts included | Full dataset caches and seed-level outputs not deposited | Incomplete |
-| PMLB label review | Evaluation scripts included | Full condition/seed exports missing | Incomplete |
+| PMLB label review | v3.1 strict-OOF source, summary and tests included | Table 4 (24 values), Table 5 (18 mean values), six Holm tests matched; original full audit JSON absent | Partial: 12 pooled Table 5 denominators still pending |
 | Path and feature stability | Source scripts included | Only selected numerical summaries included | Incomplete |
 | Figures | Generation scripts and selected numerical inputs included | Not every final figure data source supplied | Incomplete |
 
 ## Paper version
 
-The archived `paper_reproducibility/results/final_manuscript_results.json` was prepared before the November 2026 manuscript edits. It is useful for provenance but should not automatically be taken as the numerical lock for the latest PDF. Reconcile all reported metrics with the final manuscript and save their source files before making an immutable release.
+The archived `paper_reproducibility/results/final_manuscript_results.json` was prepared before the November 2026 manuscript edits and is not the authoritative source for the final Table 4/5 results. Those **42 printed means** match `paper_reproducibility/results/v31_strict_oof_scaling_audit_summary.json` exactly. See [label-review audit](label-review-audit.md) for the remaining original full-JSON requirement and exact checksum.
 
 ## Required for a full release
 
