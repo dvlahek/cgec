@@ -57,7 +57,7 @@ python wine/recompute_wine333_from_cgec.py --wine /path/to/winequality-red.csv
 
 The repository includes the original paper-oriented CGEC source and selected archived numerical artifacts from the source branch of `dvlahek/MCGC-new` (commit `5b1fc6af4387d934f3f06a395b563db7a5d1efe3`) as well as verified seed-0 Wine files. They do not yet form a complete frozen recreation of every experiment in the latest manuscript. Some original baseline and multi-seed results, dataset caches and environment details remain to be deposited. The October results lock predates the November manuscript revision and must not be treated as a full independent re-run.
 
-See the [minimum reproducibility plan](docs/minimum-reproducibility.md), [Table 4/5 label-review audit](docs/label-review-audit.md), [current evidence coverage](docs/reproducibility.md), and [Wine case-study protocol](docs/wine.md). No publication release, DOI or complete-reproduction claim has yet been assigned.
+See the [minimum reproducibility plan](docs/minimum-reproducibility.md), [Table 3 verification instructions](docs/table3-audit.md), [Table 4/5 label-review audit](docs/label-review-audit.md), [current evidence coverage](docs/reproducibility.md), and [Wine case-study protocol](docs/wine.md). No publication release, DOI or complete-reproduction claim has yet been assigned.
 
 ## Citation
 
