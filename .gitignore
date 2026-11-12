@@ -15,3 +15,4 @@ Thumbs.db
 wine/*_RECOMPUTED.csv
 wine/*_model_export.csv
 wine/*_model_audit.json
+wine/winequality-red.csv
