@@ -16,3 +16,7 @@ wine/*_RECOMPUTED.csv
 wine/*_model_export.csv
 wine/*_model_audit.json
 wine/winequality-red.csv
+
+# Local installation metadata and audit scratch files
+*.egg-info/
+/validation/
