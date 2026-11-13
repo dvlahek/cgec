@@ -25,7 +25,7 @@
 | Fig. S3 — wine feature magnitudes | `wine/source_wine_seed0/wine_oof_feature_interventions.csv` | Raw seed-0 intervention data available; standalone figure generator not yet tracked | Retain the plotting source or plot-ready aggregation |
 | Fig. S4 — wine oriented interventions by grade | Wine seed-0 OOF intervention and grade records | Seed-0 source available; standalone figure generator not yet tracked | Archive exact plotting source |
 | Fig. S5 — wine adjacent-review conditional null | Wine OOF scores; PDF reports conditional p=0.273 and 0.511 | **Original conditional hypergeometric calculation and plot data not deposited** | Find original calculation JSON/script, no new OOF fitting |
-| **Fig. S6 — PMLB dataset deltas** | `figures/fig3_oof_vs_knn.py` and older `results/fig3_oof_vs_knn_summary.json` | **Version alignment must be checked**: the PDF labels correspond to the older frozen dataset-level deltas, whereas final Table 4 uses strict-OOF **v3.1** | Run `scripts/verify_supplement_s6_v31.py` on locally preserved full v3.1 JSON; rebuild figure from v3.1 summary *only if differing* |
+| **Fig. S6 — PMLB dataset deltas** | `figures/fig3_oof_vs_knn.py`, older frozen summary, and locally SHA-256-verified v3.1 full JSON | **Verified mismatch: 6/24 plotted three-decimal labels differ**; both v3.1 sign tests still 10/12 wins, p=0.03857421875 | **Regenerate Fig. S6 from `validation/fig_s6_v31_summary.json` and replace the old Overleaf plot** |
 | Fig. S7 — breast-cancer interventions | `fig_bc_interventions.py`, `results/bc_interventions_summary.json`, archived five-seed feature-stability reproduction | Numerical stability result reproduced; plot script exists | Retain final placed figure asset; no fresh seed sweep |
 
 **Figure numbering caution:** the historical source file `fig3_oof_vs_knn.py` corresponds to **Supplementary Fig. S6 in the latest PDF**, not to main Fig. 3 (which is path validation). Preserve that distinction in any new documentation.
@@ -50,6 +50,21 @@ The verifier enforces the archived SHA-256, 12 datasets and 240 dataset-conditio
 ```
 
 Then replace **only Supplementary Fig. S6** in Overleaf once the author visually confirms its match to the v3.1 results. Do not silently substitute the plot or rewrite the frozen historical file.
+
+## Confirmed Figure S6 correction (local verifier, 13 November 2026)
+
+The author ran the source-checking verifier on the original 1,469,272-byte full v3.1 OOF JSON and reported **PASS**, 12 datasets, 240 units, 24 compared figure points. Six printed values change:
+
+| Dataset | Metric | Older displayed label | v3.1 correct label |
+| --- | --- | ---: | ---: |
+| ecoli | PR-AUC | +0.015 | +0.014 |
+| mfeat_zernike | PR-AUC | +0.139 | +0.140 |
+| spectf | PR-AUC | +0.179 | +0.173 |
+| vehicle | ROC-AUC | -0.019 | -0.018 |
+| vehicle | PR-AUC | -0.022 | -0.020 |
+| yeast | PR-AUC | +0.008 | +0.007 |
+
+Maximum absolute new–old difference across all 24 points: `0.006032602`. See [verification receipt](../reproductions/supplement_s6_v31/verification_receipt.json). The exact new figure has **not yet been regenerated or visually checked**. Keep the old frozen summary as historical evidence; do not overwrite it.
 
 ## Preserve original audited inputs — NO TRAINING
 

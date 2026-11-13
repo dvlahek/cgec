@@ -1,0 +1,65 @@
+{
+  "artifact": "Supplementary Figure S6 strict-OOF v3.1 data comparison",
+  "verified_date": "2026-11-13",
+  "status": "PASS_LOCAL_SOURCE_AUDIT_FIGURE_REPLACEMENT_REQUIRED",
+  "source_file": "v31_strict_oof_scaling_audit.json",
+  "source_sha256": "530f9599d945dd895cc2d155b81020e7488a58dcd7369c36c8d362fb7cbc692e",
+  "test_units": 240,
+  "datasets": 12,
+  "compared_plot_values": 24,
+  "changed_three_decimal_labels": 6,
+  "max_absolute_source_delta_vs_older_summary": 0.006032602,
+  "sign_tests": {
+    "roc_auc": {
+      "wins": 10,
+      "ties": 0,
+      "losses": 2,
+      "p_two_sided": 0.03857421875
+    },
+    "pr_auc": {
+      "wins": 10,
+      "ties": 0,
+      "losses": 2,
+      "p_two_sided": 0.03857421875
+    }
+  },
+  "label_changes": [
+    {
+      "dataset": "ecoli",
+      "metric": "pr_auc",
+      "old": "+0.015",
+      "new": "+0.014"
+    },
+    {
+      "dataset": "mfeat_zernike",
+      "metric": "pr_auc",
+      "old": "+0.139",
+      "new": "+0.140"
+    },
+    {
+      "dataset": "spectf",
+      "metric": "pr_auc",
+      "old": "+0.179",
+      "new": "+0.173"
+    },
+    {
+      "dataset": "vehicle",
+      "metric": "roc_auc",
+      "old": "-0.019",
+      "new": "-0.018"
+    },
+    {
+      "dataset": "vehicle",
+      "metric": "pr_auc",
+      "old": "-0.022",
+      "new": "-0.020"
+    },
+    {
+      "dataset": "yeast",
+      "metric": "pr_auc",
+      "old": "+0.008",
+      "new": "+0.007"
+    }
+  ],
+  "caveat": "Receipt records author-provided console output; the full revised figure input JSON and rendered figure have not been uploaded."
+}
