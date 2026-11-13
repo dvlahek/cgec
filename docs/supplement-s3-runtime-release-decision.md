@@ -1,12 +1,17 @@
 # Decision record — unsupported Supplementary Table S3 runtime measurements
 
-**Status:** Proposed editorial change; **not yet applied to Overleaf manuscript sources**.
+**Status:** **Recovery-first hold**. Previous proposal to remove the table is suspended; no Overleaf source was edited.
 
 **Evidence reviewed:** CGEC main PDF dated 12 November 2026, Supplementary PDF dated 12 November 2026, repository source and experiment output tree, author-side filename and small-text-content searches on `C:\Articles\Clanci\MCGC-new-repo`.
 
-## Decision and scientific justification
+> **STATUS UPDATE — 13 November 2026: RECOVERY FIRST; DO NOT REMOVE S3 YET.**
+> Earlier project conversation on 30 October 2026 recorded a **completed v3.6b runtime audit**: 8 datasets × 5 seeds = 40/40 units, 1,440 tuned-CGEC candidate evaluations and 240 component records; end-to-end medians tuned CGEC 3.143 s / RF 7.821 s, final-model medians 34.45 ms / 141.75 ms. Those are historical completion records, **not a re-audit of raw source bytes**.
+> Crucially, the experiment was executed in **`C:\Users\dinov\Desktop\Develop\CGEC-runtime`** using a `v36b_runtime_full.log` Tee-Object logfile. The previous negative searches inspected only `C:\Articles\Clanci\MCGC-new-repo` and therefore did not examine this separate run directory. The v3.6b source's `v32.PAPER_ROOT` resolves to `paper_reproducibility` relative to its script, so the expected original output path is **`C:\Users\dinov\Desktop\Develop\CGEC-runtime\paper_reproducibility\results\`**.
+> **Action:** search this historical directory for `v36b_runtime_summary.json`, `v36b_runtime_components.jsonl`, `v36b_runtime_candidates.jsonl` and `v36b_runtime_full.log`, then verify source hash and Table S3 medians. The prior omission proposal below is **suspended** pending this recovery. Do not delete S3 from Overleaf on the basis of earlier negative searches alone.
 
-**Prefer removing the standalone runtime subsection and Table S3 for the current manuscript release rather than rerunning a 40-unit timing suite.** The experiment script `paper_reproducibility/benchmarks/benchmark_real_data_runtime_medium_v36b.py` and protocol code exist, but no original `v36b_runtime_summary.json` or runtime candidates/components logs were found. A search for the published values `3.143` and `7.821` found only unrelated `original_margin` values in an explanation-stability file. Those are not timing evidence.
+## Historical conditional omission plan (only if original runtime artifacts truly cannot be recovered)
+
+**Previously proposed, now on hold:** consider omitting the standalone runtime subsection and Table S3 **only if the 30-Oct-2026 completed run's original source artifacts cannot be recovered** after checking the original CGEC-runtime workstation directory and backups. The experiment script `paper_reproducibility/benchmarks/benchmark_real_data_runtime_medium_v36b.py` and protocol code exist, but no original `v36b_runtime_summary.json` or runtime candidates/components logs were found. A search for the published values `3.143` and `7.821` found only unrelated `original_margin` values in an explanation-stability file. Those are not timing evidence.
 
 Table S3 reports descriptive hardware-dependent wall-clock results: tuned CGEC 3.143 s and random forest 7.821 s end-to-end; tuned CGEC 34.45 ms and random forest 141.75 ms final fit+prediction, plus four other rows. Without the original 40 dataset×seed timing records, there is currently no evidence to independently verify these medians. Re-running them on a new software/hardware environment is a **new timing experiment**, not verification of the historical time observations.
 
