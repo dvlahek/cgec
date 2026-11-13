@@ -1,3 +1,20 @@
+# Follow-up QA of new Overleaf exports — 13 November 2026, 16:11 filenames
+
+**Reviewed files:** `main(20261113-161107).pdf` (26 pages; SHA-256 `693d03c36bcdf9de9d1442251e3af4ef7a4309836dff9af3bba6cadd013494b9`) and `supplementary(20261113-161107).pdf` (11 pages; SHA-256 `589ffc381be0907bb0f3c2d244640179ff149fd7e38dc4882737b6e1f99bf64f`).
+
+**Corrected since previous Nov-12 review:**
+- Supplementary PDF p. 10, Fig. S6 has all six corrected v3.1 figure labels (`ecoli` PR +0.014; `mfeat Zernike` PR +0.140; `SPECTF` PR +0.173; `vehicle` ROC −0.018 / PR −0.020; `yeast` PR +0.007).
+- Main PDF p. 14 explicitly reports **unadjusted** `p=0.0386` for each kNN ROC-AUC/PR-AUC comparison, with `p_Holm=0.0771` when two metrics are treated as one family.
+- Author affiliations/corresponding email appear on p. 1. Supplementary S4 and Table S3 remain correctly present.
+
+**Two required remaining edits:**
+1. **Main PDF p. 14** has literal `Individual reviewed cases are examined in Section ??.` Replace unresolved cross-reference with a valid LaTeX label pointing to **Section 6.5, Explainable training-label review**; compile twice and confirm `??` is absent.
+2. **Supplementary PDF p. 10, Fig. S6 caption** still says `with exact two-sided sign-test p = 0.0386 for both metrics` and does not qualify the p-values as unadjusted. Revise to `with unadjusted exact two-sided sign-test p = 0.0386 for each metric (Holm-adjusted p = 0.0771 for the two-metric family)`. This matches the corrected main-text disclosure.
+
+**After those two edits:** re-export PDFs, search for `??` in both, check the Fig. S6 caption and the main p. 14 reference. No further numeric runs are indicated. The final data and code availability statement should still reflect the true archive/public release status at submission. No Overleaf edits were made through GitHub.
+
+---
+
 # Manuscript + Supplementary final QA — 13 November 2026
 
 **Source versions actually reviewed**: main PDF `main(20261112-085144).pdf` (26 pages, SHA-256 `3d687bf0a7b5dc98632f2ec028ce0b1f38ef57a47932f11056bc617f86e72369`), Supplementary PDF `supplementary(20261112-085145).pdf` (11 pages, SHA-256 `6c8bbecd8d1d919db23a2a389abb19b5bf59ffd7fb448d574129b43dacb1aca8`). These **predate** the 13 November 2026 corrected S6 asset and subsequent GitHub data archive; they are **not** known to be the latest Overleaf builds.
