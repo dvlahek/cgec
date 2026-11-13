@@ -1,0 +1,45 @@
+{
+  "outcome": "PASS",
+  "manuscript": "Table 3, PDF dated 2026-11-12",
+  "method": "read-only verification, no training",
+  "table_values_checked": 48,
+  "paired_dataset_seed_units": 96,
+  "files_sha256": {
+    "summary": "a99547042f7845a90811894b801f32d16a671c98610aa1a1bcdc00e8e650f96b",
+    "fixed": "7f26f3d4028a119a8b83d71faad05fbc031ae37d9002695be56c6a5fe0a67a76",
+    "tuned": "cc367789512d3b1bc2c3c77a8e5fee35309de8bfd0afdedd583893f27c08a91f"
+  },
+  "tuned_minus_fixed_eaurc_improvement": 0.004548503410246824,
+  "primary_comparisons": {
+    "tuned_vs_fixed": {
+      "wins": 7,
+      "ties": 0,
+      "losses": 1,
+      "two_sided_p": 0.0703125
+    },
+    "scaled_tuned_knn_confidence": {
+      "wins": 6,
+      "ties": 0,
+      "losses": 2,
+      "two_sided_p": 0.2890625
+    },
+    "tuned_random_forest_confidence": {
+      "wins": 1,
+      "ties": 0,
+      "losses": 7,
+      "two_sided_p": 0.0703125
+    },
+    "scaled_tuned_label_spreading_confidence": {
+      "wins": 8,
+      "ties": 0,
+      "losses": 0,
+      "two_sided_p": 0.0078125
+    },
+    "tuned_rbf_svm_confidence": {
+      "wins": 4,
+      "ties": 0,
+      "losses": 4,
+      "two_sided_p": 1
+    }
+  }
+}

@@ -14,7 +14,7 @@ These files were located in `C:\\Articles\\Clanci\\MCGC-new-repo\\paper_reproduc
 | `v33_tuned_cgec_runs.jsonl` | 1,046,187 | Tuned-CGEC per-seed results |
 | `v33_tuned_cgec_summary.json` | 740,879 | Full v3.3 dataset and panel summary |
 
-The presence and file sizes above come from the author's local file listing, not from an independent file-content check.
+The file sizes above came from the author's local file listing. A subsequent locally executed verifier checked the full three input files, recorded their SHA-256 checksums and reported PASS. The original source bytes remain on the workstation, not in this GitHub repository.
 
 ## Run the minimum audit (no training)
 
@@ -36,10 +36,33 @@ The script:
 
 The procedure reads existing files only and does not import ML libraries, fit models or download datasets.
 
+## Verified local result — 13 November 2026
+
+The author supplied [the read-only audit receipt](../reproductions/table3_v33/verification_receipt.json), which reports `PASS` for **48 reported E-AURC cells**, **96 dataset×seed experimental units**, and all five primary dataset-level comparisons. Exact two-sided sign-test probabilities computed independently from the receipt's 8-dataset win/loss counts match its values.
+
+| Compared models | W/T/L (tuned CGEC favorable) | Exact two-sided p |
+| --- | ---: | ---: |
+| tuned vs fixed CGEC | 7/0/1 | 0.0703125 |
+| tuned vs kNN | 6/0/2 | 0.2890625 |
+| tuned vs random forest | 1/0/7 | 0.0703125 |
+| tuned vs Label Spreading | 8/0/0 | 0.0078125 |
+| tuned vs RBF-SVM | 4/0/4 | 1.0 |
+
+The equal-dataset mean fixed-minus-tuned E-AURC improvement was `0.004548503410246824`. These are **unadjusted** sign-test values; the 7/1 tuned-versus-fixed comparison does not cross the two-sided 0.05 threshold.
+
+Original source checksums recorded by the submitted verification:
+
+| Input | SHA-256 |
+| --- | --- |
+| v33 summary | `a99547042f7845a90811894b801f32d16a671c98610aa1a1bcdc00e8e650f96b` |
+| v32c fixed records | `7f26f3d4028a119a8b83d71faad05fbc031ae37d9002695be56c6a5fe0a67a76` |
+| v33 tuned records | `cc367789512d3b1bc2c3c77a8e5fee35309de8bfd0afdedd583893f27c08a91f` |
+
+The receipt records the outcome of a local verification and was inspected for internal consistency. **The raw inputs have not been separately read in this ChatGPT session or deposited in Git.** No fresh seed computation was undertaken here.
+
 ## Decision
 
-- If every check passes, the **reported Table 3 numbers and inferential summaries are reproducible from the preserved seed-level records**, without rerunning the benchmark.
-- If a check fails, inspect the reported discrepancy before adjusting either the code or manuscript. Do not rerun all seeds reflexively.
-- The source checkpoint files are not yet committed to Git. An audit receipt does not replace an archival copy of those exact source files.
+- **Local verification passed.** The reported Table 3 numbers and inferential summaries were reconstructed from the preserved seed-level records without rerunning the benchmark.
+- **Archival follow-up:** the original source checkpoint files are not yet committed to Git. The receipt and checksums do not replace the underlying data, which should be deposited unchanged when preparing a complete release.
 
 The primary fixed-model comparison and tuned secondary analysis must remain distinct, as in the manuscript. Matched-tuned CGEC improvement is not evidence of universal superiority over random forest or RBF-SVM.

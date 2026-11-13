@@ -28,7 +28,7 @@ The `src/mcgc/` package provides compatibility for the original benchmark script
 | Wine 333 independent refit | Included | Fold indices and direct contributions | Checkable; small archived difference |
 | Wine five grouped seeds | Analysis code, partial exports | Only seed 0 currently available | Incomplete |
 | Nonlinear twelve-seed prediction | Benchmark scripts included | Full original run records and baseline outputs not deposited | Incomplete |
-| Real-data eight-dataset panel | Benchmark/tuning scripts included | Full dataset caches and seed-level outputs not deposited | Incomplete |
+| Real-data eight-dataset panel | v32c/v33 source scripts, completed local read-only verifier and receipt | All 48 Table 3 cells, 96 seed units and five sign tests checked; full source JSON/JSONL remains local | Verified locally; original source artifacts need repository deposit |
 | PMLB label review | v3.1 strict-OOF source, summary, original locally verified file and tests | Table 4 (24 values), Table 5 (18 means), all 12 denominators, six Holm tests checked | **Verified locally**; original full audit needs repository deposit |
 | Path and feature stability | Source scripts included | Only selected numerical summaries included | Incomplete |
 | Figures | Generation scripts and selected numerical inputs included | Not every final figure data source supplied | Incomplete |
