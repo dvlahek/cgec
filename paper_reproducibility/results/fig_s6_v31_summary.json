@@ -1,0 +1,266 @@
+{
+  "description": "Strict fold-local OOF v3.1 dataset-level CGEC minus OOF kNN deltas for Supplementary Fig. S6",
+  "source_sha256": "530f9599d945dd895cc2d155b81020e7488a58dcd7369c36c8d362fb7cbc692e",
+  "sign_test_p": 0.03857421875,
+  "datasets": [
+    {
+      "dataset": "Hill_Valley_without_noise",
+      "roc_auc": -0.026193306666456362,
+      "pr_auc": -0.0130134238783981
+    },
+    {
+      "dataset": "bupa",
+      "roc_auc": 0.03291538107145853,
+      "pr_auc": 0.03171005782708319
+    },
+    {
+      "dataset": "ecoli",
+      "roc_auc": 0.002037819399255736,
+      "pr_auc": 0.014067616796760607
+    },
+    {
+      "dataset": "mfeat_fourier",
+      "roc_auc": 0.004969281962708294,
+      "pr_auc": 0.04799850732443045
+    },
+    {
+      "dataset": "mfeat_karhunen",
+      "roc_auc": 0.0090276368065898,
+      "pr_auc": 0.06841027237183084
+    },
+    {
+      "dataset": "mfeat_zernike",
+      "roc_auc": 0.03745026291615361,
+      "pr_auc": 0.14036692009259644
+    },
+    {
+      "dataset": "saheart",
+      "roc_auc": 0.04318852680208318,
+      "pr_auc": 0.07902533896842462
+    },
+    {
+      "dataset": "schizo",
+      "roc_auc": 0.03393955143921412,
+      "pr_auc": 0.031068583186492915
+    },
+    {
+      "dataset": "spectf",
+      "roc_auc": 0.041802404999549236,
+      "pr_auc": 0.17296739804763794
+    },
+    {
+      "dataset": "vehicle",
+      "roc_auc": -0.018426736095738305,
+      "pr_auc": -0.020059234727297315
+    },
+    {
+      "dataset": "wine_quality_red",
+      "roc_auc": 0.0037483854694939645,
+      "pr_auc": 0.02619638044133865
+    },
+    {
+      "dataset": "yeast",
+      "roc_auc": 0.0009981370410726553,
+      "pr_auc": 0.007426669781730899
+    }
+  ],
+  "comparison_to_older_figure": {
+    "n_comparisons": 24,
+    "changed_3dp_labels": 6,
+    "max_absolute_delta": 0.006032601952362049,
+    "details": [
+      {
+        "dataset": "Hill_Valley_without_noise",
+        "metric": "roc_auc",
+        "older": -0.026,
+        "v31": -0.026193306666456362,
+        "delta_v31_minus_older": -0.00019330666645636305,
+        "printed_3dp_changed": false
+      },
+      {
+        "dataset": "Hill_Valley_without_noise",
+        "metric": "pr_auc",
+        "older": -0.013,
+        "v31": -0.0130134238783981,
+        "delta_v31_minus_older": -1.3423878398101038e-05,
+        "printed_3dp_changed": false
+      },
+      {
+        "dataset": "bupa",
+        "metric": "roc_auc",
+        "older": 0.033,
+        "v31": 0.03291538107145853,
+        "delta_v31_minus_older": -8.461892854147446e-05,
+        "printed_3dp_changed": false
+      },
+      {
+        "dataset": "bupa",
+        "metric": "pr_auc",
+        "older": 0.032,
+        "v31": 0.03171005782708319,
+        "delta_v31_minus_older": -0.00028994217291680724,
+        "printed_3dp_changed": false
+      },
+      {
+        "dataset": "ecoli",
+        "metric": "roc_auc",
+        "older": 0.002,
+        "v31": 0.002037819399255736,
+        "delta_v31_minus_older": 3.781939925573581e-05,
+        "printed_3dp_changed": false
+      },
+      {
+        "dataset": "ecoli",
+        "metric": "pr_auc",
+        "older": 0.015,
+        "v31": 0.014067616796760607,
+        "delta_v31_minus_older": -0.0009323832032393925,
+        "printed_3dp_changed": true
+      },
+      {
+        "dataset": "mfeat_fourier",
+        "metric": "roc_auc",
+        "older": 0.005,
+        "v31": 0.004969281962708294,
+        "delta_v31_minus_older": -3.071803729170607e-05,
+        "printed_3dp_changed": false
+      },
+      {
+        "dataset": "mfeat_fourier",
+        "metric": "pr_auc",
+        "older": 0.048,
+        "v31": 0.04799850732443045,
+        "delta_v31_minus_older": -1.4926755695504612e-06,
+        "printed_3dp_changed": false
+      },
+      {
+        "dataset": "mfeat_karhunen",
+        "metric": "roc_auc",
+        "older": 0.009,
+        "v31": 0.0090276368065898,
+        "delta_v31_minus_older": 2.763680658980118e-05,
+        "printed_3dp_changed": false
+      },
+      {
+        "dataset": "mfeat_karhunen",
+        "metric": "pr_auc",
+        "older": 0.068,
+        "v31": 0.06841027237183084,
+        "delta_v31_minus_older": 0.0004102723718308332,
+        "printed_3dp_changed": false
+      },
+      {
+        "dataset": "mfeat_zernike",
+        "metric": "roc_auc",
+        "older": 0.037,
+        "v31": 0.03745026291615361,
+        "delta_v31_minus_older": 0.0004502629161536112,
+        "printed_3dp_changed": false
+      },
+      {
+        "dataset": "mfeat_zernike",
+        "metric": "pr_auc",
+        "older": 0.139,
+        "v31": 0.14036692009259644,
+        "delta_v31_minus_older": 0.0013669200925964242,
+        "printed_3dp_changed": true
+      },
+      {
+        "dataset": "saheart",
+        "metric": "roc_auc",
+        "older": 0.043,
+        "v31": 0.04318852680208318,
+        "delta_v31_minus_older": 0.00018852680208318595,
+        "printed_3dp_changed": false
+      },
+      {
+        "dataset": "saheart",
+        "metric": "pr_auc",
+        "older": 0.079,
+        "v31": 0.07902533896842462,
+        "delta_v31_minus_older": 2.5338968424618025e-05,
+        "printed_3dp_changed": false
+      },
+      {
+        "dataset": "schizo",
+        "metric": "roc_auc",
+        "older": 0.034,
+        "v31": 0.03393955143921412,
+        "delta_v31_minus_older": -6.044856078588068e-05,
+        "printed_3dp_changed": false
+      },
+      {
+        "dataset": "schizo",
+        "metric": "pr_auc",
+        "older": 0.031,
+        "v31": 0.031068583186492915,
+        "delta_v31_minus_older": 6.85831864929154e-05,
+        "printed_3dp_changed": false
+      },
+      {
+        "dataset": "spectf",
+        "metric": "roc_auc",
+        "older": 0.042,
+        "v31": 0.041802404999549236,
+        "delta_v31_minus_older": -0.00019759500045076622,
+        "printed_3dp_changed": false
+      },
+      {
+        "dataset": "spectf",
+        "metric": "pr_auc",
+        "older": 0.179,
+        "v31": 0.17296739804763794,
+        "delta_v31_minus_older": -0.006032601952362049,
+        "printed_3dp_changed": true
+      },
+      {
+        "dataset": "vehicle",
+        "metric": "roc_auc",
+        "older": -0.019,
+        "v31": -0.018426736095738305,
+        "delta_v31_minus_older": 0.0005732639042616942,
+        "printed_3dp_changed": true
+      },
+      {
+        "dataset": "vehicle",
+        "metric": "pr_auc",
+        "older": -0.022,
+        "v31": -0.020059234727297315,
+        "delta_v31_minus_older": 0.001940765272702684,
+        "printed_3dp_changed": true
+      },
+      {
+        "dataset": "wine_quality_red",
+        "metric": "roc_auc",
+        "older": 0.004,
+        "v31": 0.0037483854694939645,
+        "delta_v31_minus_older": -0.00025161453050603563,
+        "printed_3dp_changed": false
+      },
+      {
+        "dataset": "wine_quality_red",
+        "metric": "pr_auc",
+        "older": 0.026,
+        "v31": 0.02619638044133865,
+        "delta_v31_minus_older": 0.0001963804413386526,
+        "printed_3dp_changed": false
+      },
+      {
+        "dataset": "yeast",
+        "metric": "roc_auc",
+        "older": 0.001,
+        "v31": 0.0009981370410726553,
+        "delta_v31_minus_older": -1.862958927344692e-06,
+        "printed_3dp_changed": false
+      },
+      {
+        "dataset": "yeast",
+        "metric": "pr_auc",
+        "older": 0.008,
+        "v31": 0.007426669781730899,
+        "delta_v31_minus_older": -0.0005733302182691011,
+        "printed_3dp_changed": true
+      }
+    ]
+  }
+}
