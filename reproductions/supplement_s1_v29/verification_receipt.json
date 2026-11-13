@@ -1,0 +1,82 @@
+{
+  "artifact": "CGEC Supplementary Table S1 original v2.9 sensitivity audit",
+  "calculated_means": {
+    "K16": {
+      "accuracy": 0.8111111111111111,
+      "eaurc": 0.07967119386064897
+    },
+    "K8": {
+      "accuracy": 0.8091269841269841,
+      "eaurc": 0.07590606589347779
+    },
+    "alpha075": {
+      "accuracy": 0.810978835978836,
+      "eaurc": 0.07553133930433231
+    },
+    "alpha095": {
+      "accuracy": 0.8064814814814815,
+      "eaurc": 0.08366928897838753
+    },
+    "nD20": {
+      "accuracy": 0.8076719576719577,
+      "eaurc": 0.07614722985814952
+    },
+    "nD80": {
+      "accuracy": 0.8076719576719577,
+      "eaurc": 0.07612012740672285
+    },
+    "nominal_K12_a085_nD40": {
+      "accuracy": 0.8076719576719577,
+      "eaurc": 0.0761182517491421
+    }
+  },
+  "changed_prediction_units": {
+    "nD20": 2,
+    "nD80": 0
+  },
+  "method": "Read-only JSON arithmetic; no model training",
+  "printed_means_checked": 14,
+  "sign_test_checks": {
+    "K16_eaurc": {
+      "losses": 6,
+      "p_two_sided": 6.960169412195683e-05,
+      "ties": 0,
+      "wins": 30
+    },
+    "K8_accuracy": {
+      "losses": 15,
+      "p_two_sided": 0.860050065908581,
+      "ties": 4,
+      "wins": 17
+    },
+    "K8_eaurc": {
+      "losses": 16,
+      "p_two_sided": 0.617719317029696,
+      "ties": 0,
+      "wins": 20
+    },
+    "alpha075_accuracy": {
+      "losses": 13,
+      "p_two_sided": 1.0,
+      "ties": 9,
+      "wins": 14
+    },
+    "alpha075_eaurc": {
+      "losses": 24,
+      "p_two_sided": 0.06524533522315323,
+      "ties": 0,
+      "wins": 12
+    },
+    "alpha095_eaurc": {
+      "losses": 5,
+      "p_two_sided": 1.2913485988974571e-05,
+      "ties": 0,
+      "wins": 31
+    }
+  },
+  "source_bytes": 231765,
+  "source_file": "v29_field_core_parameter_sensitivity.json",
+  "source_sha256": "965afc2b18ead70bbb242082614684917a14a1db56fc51fa657d0d24cbfe1843",
+  "source_units": 36,
+  "status": "PASS"
+}
