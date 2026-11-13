@@ -17,14 +17,14 @@
 
 | Item | Data/implementation | Assessment | Minimum next step |
 | --- | --- | --- | --- |
-| Table S1 — one-factor sensitivity | `benchmark_field_core_sensitivity_v29.py`; original `v29_field_core_parameter_sensitivity.json` (231,765 bytes) now located in the old local `results/` directory | **Source file located but its contents not yet audited** | Run [`scripts/verify_supplement_s1_v29.py`](../scripts/verify_supplement_s1_v29.py), then stage original byte-for-byte if all checks pass |
+| Table S1 — one-factor sensitivity | `benchmark_field_core_sensitivity_v29.py`, full original v29 JSON and SHA-256 receipt | **PASS:** 14 printed means, 36 dataset×seed units, six exact sign tests; source committed `e61e056a` | Complete; no rerun |
 | Table S2 — digits/wine prediction | `results/figure_inputs.json` -> `predictive.real_primary` | Four published mean advantages and W/T/L checked by `tests/test_supplementary_table_s2.py` | Test locally (no training) |
 | Table S3 — runtime, 40 units | `benchmark_real_data_runtime_medium_v36b.py` | Original v36b runtime summary/records **not** deposited | Locate `v36b_runtime_summary.json` and candidate/component JSONL before claiming raw reproducibility |
 | Fig. S1 — selective-risk differences | `fig_predictive_boundary.py`, `results/figure_inputs.json` | Reconstructible from archived *aggregate* source, not from original seed-level runs | Retain source file and final placed figure; no training required |
 | Fig. S2 — spiral path | `fig_spiral_evidence.py`, `provenance/spiral_query.json` | Script can regenerate an illustrative case; final placed figure source absent | Archive publication plot source from original manuscript project |
 | Fig. S3 — wine feature magnitudes | `wine/source_wine_seed0/wine_oof_feature_interventions.csv` | Raw seed-0 intervention data available; standalone figure generator not yet tracked | Retain the plotting source or plot-ready aggregation |
 | Fig. S4 — wine oriented interventions by grade | Wine seed-0 OOF intervention and grade records | Seed-0 source available; standalone figure generator not yet tracked | Archive exact plotting source |
-| Fig. S5 — wine adjacent-review conditional null | Wine OOF scores; PDF reports conditional p=0.273 and 0.511 | **Original conditional hypergeometric calculation and plot data not deposited** | Find original calculation JSON/script, no new OOF fitting |
+| Fig. S5 — Wine conditional adjacency null | Original seed-0 `wine_oof_scores.csv` (1599 records) | **Independent recalculation matches PDF:** 69/80 and 133/160 adjacent suggestions; exact conditional p≈0.272612 and 0.510537 | Run [`scripts/verify_wine_s5_conditional_null.py`](../scripts/verify_wine_s5_conditional_null.py) and commit receipt; original plot-building source still missing |
 | **Fig. S6 — PMLB dataset deltas** | Original v3.1 full JSON, `fig_s6_v31_summary.json`, and revised GitHub PDF/PNG | **Verified mismatch fixed in regenerated image:** 6/24 plotted three-decimal labels differed from the old v2.1 summary; sign tests remain 10/12 wins | **Visually approve revised PDF and replace the old Fig. S6 in Overleaf** |
 | Fig. S7 — breast-cancer interventions | `fig_bc_interventions.py`, `results/bc_interventions_summary.json`, archived five-seed feature-stability reproduction | Numerical stability result reproduced; plot script exists | Retain final placed figure asset; no fresh seed sweep |
 
@@ -85,10 +85,10 @@ The script validates four pinned SHA-256 values and checks sizes for the two add
 
 The author found original files under `C:\Articles\Clanci\MCGC-new-repo\results`:
 
-- `v29_field_core_parameter_sensitivity.json` — **231,765 bytes**; complete output was found but **has not yet passed the read-only source audit**.
+- `v29_field_core_parameter_sensitivity.json` — **231,765 bytes**; local source audit **PASS**, SHA-256 `965afc2b18ead70bbb242082614684917a14a1db56fc51fa657d0d24cbfe1843`, now committed.
 - `v29_field_core_parameter_sensitivity.log` — **40,856 bytes**; optional provenance, not a numerical substitute for the full JSON.
 
-The preserved v2.9 benchmark script's output schema contains `datasets`, `pooled_primary`, `protocol`, and 36 dataset×seed records with seven one-factor-at-a-time configurations. An audit tool has been added to independently recalculate all 14 four-decimal Table S1 means, six reported exact sign-test p-values, and the two diffusion-depth prediction-disagreement counts.
+The preserved v2.9 benchmark script's output schema contains `datasets`, `pooled_primary`, `protocol`, and 36 dataset×seed records with seven one-factor-at-a-time configurations. The audit tool **passed** all 14 four-decimal Table S1 means, six reported exact sign-test p-values, and the two diffusion-depth prediction-disagreement counts. The original v29 JSON and [verification receipt](../reproductions/supplement_s1_v29/verification_receipt.json) were committed to `main` in `e61e056a95991e4b40fdb831932f5c396c33091c`.
 
 Run:
 
@@ -101,7 +101,31 @@ git pull --ff-only origin main
 git status --short
 ```
 
-This does not fit any model. Do not mark Table S1 fully audited until the result shows `PASS` for all its values and statistical checks.
+The original S1 audit has passed and was archived in Git; these commands remain a reproducible read-only check and do not fit models.
+
+## Supplementary Fig. S5 exact conditional null — recovered without fitting
+
+The final Supplementary PDF uses a within-recorded-grade conditional hypergeometric null for the fraction of adjacent rival-grade suggestions among top-reviewed wines. All necessary original grade, rival, adjacency, and review-score columns are present in the existing 1,599-row `wine/source_wine_seed0/wine_oof_scores.csv`. Independent calculation using an inclusive upper-tail convolution across six recorded-grade strata returned:
+
+| Review budget | Observed adjacent | Observed share | Within-grade expected share | Exact upper-tail p |
+| --- | ---: | ---: | ---: | ---: |
+| Top 5% / 80 | 69 | 0.862500 | 0.839449 | 0.272611808 |
+| Top 10% / 160 | 133 | 0.831250 | 0.828357 | 0.510536644 |
+
+Both p-values round to the manuscript's **0.273** and **0.511**. Three original rows tie at the top-80 cutoff, but all share the same recorded grade 6 and have adjacent suggestions; the aggregate is unaffected by tie ordering.
+
+Reproduction from original OOF outputs only, with no classifier fitting:
+
+```powershell
+git pull --ff-only origin main
+.\.venv\Scripts\python.exe -m pytest
+.\.venv\Scripts\python.exe scripts\verify_wine_s5_conditional_null.py --stage
+git add -- reproductions/supplement_s5_wine/verification_receipt.json
+git commit -m "repro: archive exact Wine Figure S5 conditional null"
+git push origin main
+```
+
+The repeatable [verifier](../scripts/verify_wine_s5_conditional_null.py) and [test](../tests/test_supplementary_wine_s5.py) are now in the repository; the result still awaits the user's local run/receipt and the final plot source remains distinct from the numerical reproducibility proof.
 
 ## Remaining evidence-first search
 
@@ -113,4 +137,4 @@ Get-ChildItem "C:\Articles\Clanci\MCGC-new-repo" -Recurse -File |
   Select-Object FullName,Length
 ```
 
-**Release gate:** numeric tables 3–5 and seed-0 Wine/feature-stability checks are closed. The revised v3.1 Fig. S6 PDF/PNG and numerical input are already committed, but its *visual approval and Overleaf replacement remain open*. The original S1 v29 result is located locally and awaits the read-only verifier; S3/S5 source evidence and final placed plot sources are still outstanding. The original raw files for Tables 3–5 are archived. Neither this audit nor source copying implies a complete end-to-end experiment rerun.
+**Release gate:** Tables 3–5, Table S1, Wine seed-0 and feature stability are supported by deposited numerical sources. Fig. S5's exact within-grade null has been independently reconstructed from the deposited OOF CSV; local test/receipt remains to be run. Revised Fig. S6 PDF/PNG is committed, awaiting visual approval and Overleaf replacement. **Table S3's 40-unit timing records are still missing**: its wall-clock measurements cannot be reconstructed solely from predictive checkpoints. Final figure assets also need archival review.
