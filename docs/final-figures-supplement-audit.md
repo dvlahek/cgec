@@ -19,7 +19,7 @@
 | --- | --- | --- | --- |
 | Table S1 — one-factor sensitivity | `benchmark_field_core_sensitivity_v29.py`, full original v29 JSON and SHA-256 receipt | **PASS:** 14 printed means, 36 dataset×seed units, six exact sign tests; source committed `e61e056a` | Complete; no rerun |
 | Table S2 — digits/wine prediction | `results/figure_inputs.json` -> `predictive.real_primary` | Four published mean advantages and W/T/L checked by `tests/test_supplementary_table_s2.py` | Test locally (no training) |
-| Table S3 — runtime, 40 units | `benchmark_real_data_runtime_medium_v36b.py` | Original v36b runtime summary/records **not** deposited | Locate `v36b_runtime_summary.json` and candidate/component JSONL before claiming raw reproducibility |
+| Table S3 — runtime, 40 units | `benchmark_real_data_runtime_medium_v36b.py` exists; original 40-unit timing output **not located** | **Unsupported timing medians in the present reproducibility archive** | [Proposed manuscript edit](supplement-s3-runtime-release-decision.md): omit S4 runtime section and Table S3, adjust main Discussion cross-reference; only retain with recovered raw timing data or a new documented timing study |
 | Fig. S1 — selective-risk differences | `fig_predictive_boundary.py`, `results/figure_inputs.json` | Reconstructible from archived *aggregate* source, not from original seed-level runs | Retain source file and final placed figure; no training required |
 | Fig. S2 — spiral path | `fig_spiral_evidence.py`, `provenance/spiral_query.json` | Script can regenerate an illustrative case; final placed figure source absent | Archive publication plot source from original manuscript project |
 | Fig. S3 — wine feature magnitudes | `wine/source_wine_seed0/wine_oof_feature_interventions.csv` | Raw seed-0 intervention data available; standalone figure generator not yet tracked | Retain the plotting source or plot-ready aggregation |
@@ -138,3 +138,5 @@ Get-ChildItem "C:\Articles\Clanci\MCGC-new-repo" -Recurse -File |
 ```
 
 **Release gate:** Tables 3–5 and S1, Wine seed-0 and feature stability are supported by deposited numerical sources; Fig. S5's exact within-grade null has a locally run PASS audit and committed receipt. Revised Fig. S6 PDF/PNG is committed, awaiting visual approval and Overleaf replacement. **Table S3's 40-unit timing records are still missing**; wall-clock measurements cannot be reconstructed solely from predictive checkpoints. Final figure assets and other supporting raw results still need archival review.
+
+**Editorial status (13 November 2026):** Source searches recovered no historical Table S3 wall-clock timing outputs. [A targeted omission-and-cross-reference patch](supplement-s3-runtime-release-decision.md) is prepared but is **not applied in Overleaf**. Existing numeric S3 medians must not be presented as independently reproduced. The last user search hits were explanation `original_margin` fields, unrelated to wall-clock timings.
