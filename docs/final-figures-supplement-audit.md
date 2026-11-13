@@ -68,7 +68,7 @@ Maximum absolute new–old difference across all 24 points: `0.006032602`. See [
 
 ## Preserve original audited inputs — NO TRAINING
 
-The v3.1 raw label-review audit and v3.2c/v3.3 full files have been located on the same local machine and passed read-only source/result checks. They are not yet in GitHub. Stage the six already existing files byte-for-byte:
+The original v3.1 label-review audit and v3.2c/v3.3 full files passed local source/result checks and **have now been deposited on GitHub** in commit `88f862f4fed463d2390e633e0ddd4aa75ee8e5cf`. The commands below document how to recheck or restore them if needed; do not create a duplicate commit:
 
 ```powershell
 .\.venv\Scripts\python.exe scripts\archive_minimum_results.py --source-results-dir "C:\Articles\Clanci\MCGC-new-repo\paper_reproducibility\results"
@@ -91,4 +91,4 @@ Get-ChildItem "C:\Articles\Clanci\MCGC-new-repo" -Recurse -File |
   Select-Object FullName,Length
 ```
 
-**Release gate:** numeric tables 3–5 and seed-0 Wine/feature-stability checks are closed; remaining tasks are (a) S6 v3.1-versus-figure alignment, (b) S1/S3 and S5 figure source evidence, (c) final placed vector/plot sources from Overleaf, and (d) archiving the already verified raw files. Neither this audit nor source copying implies a complete end-to-end experiment rerun.
+**Release gate:** numeric tables 3–5 and seed-0 Wine/feature-stability checks are closed; remaining tasks are (a) committing and visually reviewing the newly generated v3.1 Supplementary Fig. S6, (b) S1/S3 and S5 figure source evidence, and (c) final placed vector/plot sources from Overleaf. The original raw files for Tables 3–5 are already archived. Neither this audit nor source copying implies a complete end-to-end experiment rerun.

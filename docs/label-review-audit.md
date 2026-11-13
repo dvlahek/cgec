@@ -46,7 +46,7 @@ The full archived audit is named:
 - Expected original length: **1,469,272 bytes**
 - Expected SHA-256: **`530f9599d945dd895cc2d155b81020e7488a58dcd7369c36c8d362fb7cbc692e`**
 
-Its name, length and checksum are recorded in the v3.1 summary. On 12 November 2026 the author located the original file on the local Windows machine and executed the no-training verifier. The supplied console output confirms **SOURCE PASS**, exact SHA-256, all **12** pooled `n_corr` denominators, and independently recomputed equal-dataset recovery rates. The 160 selected eight-multiclass dataset × condition × seed records were verified as part of this run. **The original full file has not yet been committed to this repository.** Keep the file unchanged for archival deposit; the summary and the verification receipt are not substitutes for distributing its raw contents.
+Its name, length and checksum are recorded in the v3.1 summary. On 12 November 2026 the author located the original file on the local Windows machine and executed the no-training verifier. The supplied console output confirms **SOURCE PASS**, exact SHA-256, all **12** pooled `n_corr` denominators, and independently recomputed equal-dataset recovery rates. The 160 selected eight-multiclass dataset × condition × seed records were verified as part of this run. **The original full source file is now committed** to `paper_reproducibility/results/` (commit `88f862f4fed463d2390e633e0ddd4aa75ee8e5cf`), and its SHA-256 is recorded in `archived_source_manifest.json`. The independently checked local receipt remains evidence of the read-only audit.
 
 Original source location (the verified local machine). For future independent rechecks, use:
 
@@ -67,7 +67,7 @@ The verifier checks SHA-256, all 12 pooled denominators, and recomputes each equ
 
 - **Matched:** Table 4 reported means; Table 5 reported means; exact sign-test and six-test Holm arithmetic.
 - **Matched with original full JSON on the local machine:** all 12 Table 5 pooled denominators and equal-dataset recovery rates, with the recorded source SHA-256.
-- **Pending repository archival:** deposit the already verified full JSON unchanged (the full file is currently only on the local machine).
+- **Repository archival complete:** exact original full JSON and its SHA-256 manifest are now in the GitHub repository.
 - **No further label-review training required** for this verification.
 
 Keep October `final_manuscript_results.json` as historical evidence; it is not the authoritative Table 4/5 source for the November manuscript.

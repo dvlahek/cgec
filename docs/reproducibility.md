@@ -28,14 +28,14 @@ The `src/mcgc/` package provides compatibility for the original benchmark script
 | Wine 333 independent refit | Included | Fold indices and direct contributions | Checkable; small archived difference |
 | Wine five grouped seeds | Analysis code, partial exports | Only seed 0 currently available | Incomplete |
 | Nonlinear twelve-seed prediction | Benchmark scripts included | Full original run records and baseline outputs not deposited | Incomplete |
-| Real-data eight-dataset panel | v32c/v33 source scripts, completed local read-only verifier and receipt | All 48 Table 3 cells, 96 seed units and five sign tests checked; full source JSON/JSONL remains local | Verified locally; original source artifacts need repository deposit |
-| PMLB label review | v3.1 strict-OOF source, summary, original locally verified file and tests | Table 4 (24 values), Table 5 (18 means), all 12 denominators, six Holm tests checked | **Verified locally**; original full audit needs repository deposit |
+| Real-data eight-dataset panel | v32c/v33 scripts, archived full JSON/JSONL and verified receipt | All 48 Table 3 cells, 96 seed units and five sign tests checked; original source files deposited | Verified locally; raw outputs and SHA-256 manifest tracked |
+| PMLB label review | v3.1 strict-OOF source, full original JSON, summary, tests | Table 4 (24 values), Table 5 (18 means), all 12 denominators, six Holm tests checked | **Verified locally**; full raw audit and checksum tracked |
 | Path and feature stability | Source scripts included | Only selected numerical summaries included | Incomplete |
 | Figures and supplementary tables | [Mapped figure and supplement audit](final-figures-supplement-audit.md), selected generators and numerical inputs | Table S2 regression test added; Fig. S6 may reflect old v2.1 per-dataset deltas; S1/S3/S5 raw source not yet deposited | Partial, explicit gaps; no new training required for pending checks |
 
 ## Paper version
 
-The archived `paper_reproducibility/results/final_manuscript_results.json` was prepared before the November 2026 manuscript edits and is not the authoritative source for the final Table 4/5 results. Those **42 printed means** match `paper_reproducibility/results/v31_strict_oof_scaling_audit_summary.json` exactly. The full v3.1 source JSON has been SHA-256 verified locally and all 12 pooled Table 5 denominators checked; see [label-review audit](label-review-audit.md). The original full file is not yet deposited in Git.
+The archived `paper_reproducibility/results/final_manuscript_results.json` was prepared before the November 2026 manuscript edits and is not the authoritative source for the final Table 4/5 results. Those **42 printed means** match `paper_reproducibility/results/v31_strict_oof_scaling_audit_summary.json` exactly. The full v3.1 source JSON has been SHA-256 verified locally and all 12 pooled Table 5 denominators checked; see [label-review audit](label-review-audit.md). The full original v3.1 file is now deposited under `paper_reproducibility/results/`, with SHA-256 in `archived_source_manifest.json`.
 
 ## Required for a full release
 

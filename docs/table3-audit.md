@@ -14,7 +14,7 @@ These files were located in `C:\\Articles\\Clanci\\MCGC-new-repo\\paper_reproduc
 | `v33_tuned_cgec_runs.jsonl` | 1,046,187 | Tuned-CGEC per-seed results |
 | `v33_tuned_cgec_summary.json` | 740,879 | Full v3.3 dataset and panel summary |
 
-The file sizes above came from the author's local file listing. A subsequent locally executed verifier checked the full three input files, recorded their SHA-256 checksums and reported PASS. The original source bytes remain on the workstation, not in this GitHub repository.
+The file sizes above came from the author's local file listing. A subsequent locally executed verifier checked the full three input files, recorded their SHA-256 checksums and reported PASS. The original v3.2c/v3.3 full JSON/JSONL source files have since been copied byte-for-byte to `paper_reproducibility/results/` in GitHub commit `88f862f4fed463d2390e633e0ddd4aa75ee8e5cf`, with their hashes tracked in `archived_source_manifest.json`.
 
 ## Run the minimum audit (no training)
 
@@ -63,6 +63,6 @@ The receipt records the outcome of a local verification and was inspected for in
 ## Decision
 
 - **Local verification passed.** The reported Table 3 numbers and inferential summaries were reconstructed from the preserved seed-level records without rerunning the benchmark.
-- **Archival follow-up:** the original source checkpoint files are not yet committed to Git. The receipt and checksums do not replace the underlying data, which should be deposited unchanged when preparing a complete release.
+- **Archival follow-up completed:** the original source checkpoint files and full v3.3 summary are deposited in Git. The receipt and manifest remain linked to the unchanged source files.
 
 The primary fixed-model comparison and tuned secondary analysis must remain distinct, as in the manuscript. Matched-tuned CGEC improvement is not evidence of universal superiority over random forest or RBF-SVM.
