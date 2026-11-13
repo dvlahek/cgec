@@ -30,7 +30,7 @@ Keep `validation/` as a local audit folder; do not commit the environment snapsh
 | Figure 3 — path stability and delete/refit | `figure_inputs.json` and original experiment scripts | Match stored aggregates and exact directional tests to the figure and Section 6 | Archived aggregates agree with the PDF |
 | Section 6.4 — feature interventions | `final_manuscript_results.json`, `reproductions/feature_stability_v30/` and feature-stability script | No further run needed; preserve validated local output and source context | **Reproduced on seeds 0–4; statistics match at reported precision** |
 | Wine Section 7, Figures 5–6 and Table 6 | `wine/source_wine_seed0/`, frozen strata, wine-333 contributions, original UCI data | No additional seed-0 run needed; preserve user-verified logs | Seed-0 correlations, strata and independent refit reproduced |
-| Supplementary material and figures | [Itemized audit](final-figures-supplement-audit.md), selected figure scripts, v3.1 audit | **Replace Fig. S6** (6/24 displayed labels change); locate original S1/S3/S5 outputs and final plot sources | **S6 numerically verified, replacement plot pending; Table S2 source-checkable** |
+| Supplementary material and figures | [Itemized audit](final-figures-supplement-audit.md), committed S6 PDF/PNG and v3.1 source | Visually approve Fig. S6 in Overleaf; verify newly located v29 S1 source; continue finding S3/S5 files | **S6 corrected files committed; S1 original located but audit pending; S3/S5 source gaps** |
 
 **Important:** Matching an archived aggregate against the manuscript is a *consistency check*, not an independent repeat of the underlying experiment.
 

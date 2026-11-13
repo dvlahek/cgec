@@ -17,7 +17,7 @@
 
 | Item | Data/implementation | Assessment | Minimum next step |
 | --- | --- | --- | --- |
-| Table S1 — one-factor sensitivity | `benchmark_field_core_sensitivity_v29.py` | Source code present, final full v29 numeric output **not** deposited | Find `v29_field_core_parameter_sensitivity.json` in original results; no rerun |
+| Table S1 — one-factor sensitivity | `benchmark_field_core_sensitivity_v29.py`; original `v29_field_core_parameter_sensitivity.json` (231,765 bytes) now located in the old local `results/` directory | **Source file located but its contents not yet audited** | Run [`scripts/verify_supplement_s1_v29.py`](../scripts/verify_supplement_s1_v29.py), then stage original byte-for-byte if all checks pass |
 | Table S2 — digits/wine prediction | `results/figure_inputs.json` -> `predictive.real_primary` | Four published mean advantages and W/T/L checked by `tests/test_supplementary_table_s2.py` | Test locally (no training) |
 | Table S3 — runtime, 40 units | `benchmark_real_data_runtime_medium_v36b.py` | Original v36b runtime summary/records **not** deposited | Locate `v36b_runtime_summary.json` and candidate/component JSONL before claiming raw reproducibility |
 | Fig. S1 — selective-risk differences | `fig_predictive_boundary.py`, `results/figure_inputs.json` | Reconstructible from archived *aggregate* source, not from original seed-level runs | Retain source file and final placed figure; no training required |
@@ -25,7 +25,7 @@
 | Fig. S3 — wine feature magnitudes | `wine/source_wine_seed0/wine_oof_feature_interventions.csv` | Raw seed-0 intervention data available; standalone figure generator not yet tracked | Retain the plotting source or plot-ready aggregation |
 | Fig. S4 — wine oriented interventions by grade | Wine seed-0 OOF intervention and grade records | Seed-0 source available; standalone figure generator not yet tracked | Archive exact plotting source |
 | Fig. S5 — wine adjacent-review conditional null | Wine OOF scores; PDF reports conditional p=0.273 and 0.511 | **Original conditional hypergeometric calculation and plot data not deposited** | Find original calculation JSON/script, no new OOF fitting |
-| **Fig. S6 — PMLB dataset deltas** | `figures/fig3_oof_vs_knn.py`, older frozen summary, and locally SHA-256-verified v3.1 full JSON | **Verified mismatch: 6/24 plotted three-decimal labels differ**; both v3.1 sign tests still 10/12 wins, p=0.03857421875 | **Regenerate Fig. S6 from `validation/fig_s6_v31_summary.json` and replace the old Overleaf plot** |
+| **Fig. S6 — PMLB dataset deltas** | Original v3.1 full JSON, `fig_s6_v31_summary.json`, and revised GitHub PDF/PNG | **Verified mismatch fixed in regenerated image:** 6/24 plotted three-decimal labels differed from the old v2.1 summary; sign tests remain 10/12 wins | **Visually approve revised PDF and replace the old Fig. S6 in Overleaf** |
 | Fig. S7 — breast-cancer interventions | `fig_bc_interventions.py`, `results/bc_interventions_summary.json`, archived five-seed feature-stability reproduction | Numerical stability result reproduced; plot script exists | Retain final placed figure asset; no fresh seed sweep |
 
 **Figure numbering caution:** the historical source file `fig3_oof_vs_knn.py` corresponds to **Supplementary Fig. S6 in the latest PDF**, not to main Fig. 3 (which is path validation). Preserve that distinction in any new documentation.
@@ -64,7 +64,7 @@ The author ran the source-checking verifier on the original 1,469,272-byte full 
 | vehicle | PR-AUC | -0.022 | -0.020 |
 | yeast | PR-AUC | +0.008 | +0.007 |
 
-Maximum absolute new–old difference across all 24 points: `0.006032602`. See [verification receipt](../reproductions/supplement_s6_v31/verification_receipt.json). The exact new figure has **not yet been regenerated or visually checked**. Keep the old frozen summary as historical evidence; do not overwrite it.
+Maximum absolute new–old difference across all 24 points: `0.006032602`. See [verification receipt](../reproductions/supplement_s6_v31/verification_receipt.json). A revised figure has since **been regenerated and deposited in GitHub** as `paper_reproducibility/outputs/fig_s6_v31.pdf` and `.png` (commit `86795ac1614c7fe8e969faac2ce8cf8afecea485`). **Visual confirmation and replacement in Overleaf are still pending.** Keep the old frozen summary as historical evidence; do not overwrite it.
 
 ## Preserve original audited inputs — NO TRAINING
 
@@ -81,6 +81,28 @@ git status
 
 The script validates four pinned SHA-256 values and checks sizes for the two additional full source files. It refuses to overwrite conflicting files. It does **not** commit or push automatically. Review changes, then commit only these original outputs and the generated `archived_source_manifest.json`.
 
+## Supplementary Table S1 — located original v29 output (13 November 2026)
+
+The author found original files under `C:\Articles\Clanci\MCGC-new-repo\results`:
+
+- `v29_field_core_parameter_sensitivity.json` — **231,765 bytes**; complete output was found but **has not yet passed the read-only source audit**.
+- `v29_field_core_parameter_sensitivity.log` — **40,856 bytes**; optional provenance, not a numerical substitute for the full JSON.
+
+The preserved v2.9 benchmark script's output schema contains `datasets`, `pooled_primary`, `protocol`, and 36 dataset×seed records with seven one-factor-at-a-time configurations. An audit tool has been added to independently recalculate all 14 four-decimal Table S1 means, six reported exact sign-test p-values, and the two diffusion-depth prediction-disagreement counts.
+
+Run:
+
+```powershell
+git pull --ff-only origin main
+.\.venv\Scripts\python.exe scripts\verify_supplement_s1_v29.py --raw "C:\Articles\Clanci\MCGC-new-repo\results\v29_field_core_parameter_sensitivity.json"
+
+# Only after PASS (this stages source + receipt in tracked paths):
+.\.venv\Scripts\python.exe scripts\verify_supplement_s1_v29.py --raw "C:\Articles\Clanci\MCGC-new-repo\results\v29_field_core_parameter_sensitivity.json" --stage
+git status --short
+```
+
+This does not fit any model. Do not mark Table S1 fully audited until the result shows `PASS` for all its values and statistical checks.
+
 ## Remaining evidence-first search
 
 Search only existing files; do **not** launch the benchmark scripts:
@@ -91,4 +113,4 @@ Get-ChildItem "C:\Articles\Clanci\MCGC-new-repo" -Recurse -File |
   Select-Object FullName,Length
 ```
 
-**Release gate:** numeric tables 3–5 and seed-0 Wine/feature-stability checks are closed; remaining tasks are (a) committing and visually reviewing the newly generated v3.1 Supplementary Fig. S6, (b) S1/S3 and S5 figure source evidence, and (c) final placed vector/plot sources from Overleaf. The original raw files for Tables 3–5 are already archived. Neither this audit nor source copying implies a complete end-to-end experiment rerun.
+**Release gate:** numeric tables 3–5 and seed-0 Wine/feature-stability checks are closed. The revised v3.1 Fig. S6 PDF/PNG and numerical input are already committed, but its *visual approval and Overleaf replacement remain open*. The original S1 v29 result is located locally and awaits the read-only verifier; S3/S5 source evidence and final placed plot sources are still outstanding. The original raw files for Tables 3–5 are archived. Neither this audit nor source copying implies a complete end-to-end experiment rerun.
