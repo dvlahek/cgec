@@ -66,3 +66,7 @@ See the [minimum reproducibility plan](docs/minimum-reproducibility.md), [final 
 The manuscript title is *Graph-Evidence Classification for Intrinsic Explanation and Training-Label Review*. Please use the final publication citation after acceptance. The Wine data originate from Cortez et al. (2009), *Decision Support Systems*, 47(4), 547–553.
 
 The repository has no declared software license until the authors select one.
+
+## Historical runtime timing source
+
+Supplementary Table S3's v3.6b aggregated wall-clock summary was retrieved from a previously supplied Project file and preserved at [`paper_reproducibility/results/v36b_runtime_summary_recovered.json`](paper_reproducibility/results/v36b_runtime_summary_recovered.json). All 11 printed timing medians agree. Source-byte identity and the original candidate/component checkpoint JSONL files are unavailable; the restored summary is **not** evidence of an independent timing rerun. See [verification script](scripts/verify_supplement_s3_v36b.py) and [runtime decision record](docs/supplement-s3-runtime-release-decision.md).

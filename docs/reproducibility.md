@@ -31,7 +31,7 @@ The `src/mcgc/` package provides compatibility for the original benchmark script
 | Real-data eight-dataset panel | v32c/v33 scripts, archived full JSON/JSONL and verified receipt | All 48 Table 3 cells, 96 seed units and five sign tests checked; original source files deposited | Verified locally; raw outputs and SHA-256 manifest tracked |
 | PMLB label review | v3.1 strict-OOF source, full original JSON, summary, tests | Table 4 (24 values), Table 5 (18 means), all 12 denominators, six Holm tests checked | **Verified locally**; full raw audit and checksum tracked |
 | Path and feature stability | Source scripts included | Only selected numerical summaries included | Incomplete |
-| Figures and supplementary tables | [Mapped audit](final-figures-supplement-audit.md), S1 source/receipt, S5 exact-null PASS receipt, S6 corrected PDF/PNG, archived Wine OOF | S1 14 means/six tests PASS; S5 exact p-values and local receipt PASS; S6 corrected plot archived | Partial: S3 original timing source missing, [editorial omission proposed](supplement-s3-runtime-release-decision.md); final figure/Overleaf review pending |
+| Figures and supplementary tables | [Mapped audit](final-figures-supplement-audit.md), S1 source/receipt, S5 exact-null PASS receipt, S6 corrected PDF/PNG, archived Wine OOF | S1 14 means/six tests PASS; S5 exact p-values and local receipt PASS; S6 corrected plot archived | Partial: S3 historical aggregate recovered and verified, raw runtime JSONL still missing; retain S4 and [see decision](supplement-s3-runtime-release-decision.md); final figure/Overleaf review pending |
 
 ## Paper version
 
