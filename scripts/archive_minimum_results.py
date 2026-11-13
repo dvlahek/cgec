@@ -30,7 +30,7 @@ OTHER_REQUIRED = {
     "v32c_real_data_confirmation.json": 2979336,
     "v33_tuned_cgec_candidates.jsonl": 1294741,
 }
-FILES = tuple(PINN) + tuple(OTHER_REQUIRED)
+FILES = tuple(PINNED) + tuple(OTHER_REQUIRED)
 
 
 def sha256(path):
