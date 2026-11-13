@@ -80,7 +80,7 @@ def main():
         if not target.exists():
             shutil.copyfile(orig, target)
         assert sha256(target) == digest, f"Copy integrity failed: {target}"
-        entries.append({"path": str(target.relative_to(ROOT)), "sha256": digest, "bytes": size})
+        entries.append({"path": target.relative_to(ROOT).as_posix(), "sha256": digest, "bytes": size})
     manifest = destination / "archived_source_manifest.json"
     metadata = {
         "description": "Preserved original multi-seed experiment outputs; no model retraining",
