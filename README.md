@@ -70,3 +70,7 @@ The repository has no declared software license until the authors select one.
 ## Historical runtime timing source
 
 Supplementary Table S3's v3.6b aggregated wall-clock summary was retrieved from a previously supplied Project file and preserved at [`paper_reproducibility/results/v36b_runtime_summary_recovered.json`](paper_reproducibility/results/v36b_runtime_summary_recovered.json). All 11 printed timing medians agree. Source-byte identity and the original candidate/component checkpoint JSONL files are unavailable; the restored summary is **not** evidence of an independent timing rerun. See [verification script](scripts/verify_supplement_s3_v36b.py) and [runtime decision record](docs/supplement-s3-runtime-release-decision.md).
+
+## Final manuscript QA (13 November 2026)
+
+The main (26-page) and supplementary (11-page) PDFs dated 12 November 2026 were visually checked against the archived CGEC evidence. [Final QA and required pre-submission edits](docs/final-manuscript-qa-20261113.md) identify the corrected Supplementary Fig. S6 replacement and unadjusted sign-test disclosure. Runtime Table S3 is retained; its historical v3.6b aggregate summary is recovered.
