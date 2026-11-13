@@ -1,0 +1,36 @@
+{
+  "description": "Preserved original multi-seed experiment outputs; no model retraining",
+  "files": [
+    {
+      "path": "paper_reproducibility/results/v31_strict_oof_scaling_audit.json",
+      "sha256": "530f9599d945dd895cc2d155b81020e7488a58dcd7369c36c8d362fb7cbc692e",
+      "bytes": 1469272
+    },
+    {
+      "path": "paper_reproducibility/results/v32c_real_data_confirmation_runs.jsonl",
+      "sha256": "7f26f3d4028a119a8b83d71faad05fbc031ae37d9002695be56c6a5fe0a67a76",
+      "bytes": 1535603
+    },
+    {
+      "path": "paper_reproducibility/results/v33_tuned_cgec_runs.jsonl",
+      "sha256": "cc367789512d3b1bc2c3c77a8e5fee35309de8bfd0afdedd583893f27c08a91f",
+      "bytes": 1046187
+    },
+    {
+      "path": "paper_reproducibility/results/v33_tuned_cgec_summary.json",
+      "sha256": "a99547042f7845a90811894b801f32d16a671c98610aa1a1bcdc00e8e650f96b",
+      "bytes": 740879
+    },
+    {
+      "path": "paper_reproducibility/results/v32c_real_data_confirmation.json",
+      "sha256": "a986b7fdd16bb5146af7257e8f0bc8c1bfabcc90939916a6ed33c33e32434edf",
+      "bytes": 2979336
+    },
+    {
+      "path": "paper_reproducibility/results/v33_tuned_cgec_candidates.jsonl",
+      "sha256": "a5f7ea7b22961ec0ecd91cc6a463caddbc0eb4ab5ab04476cd3edeed0c6b87cc",
+      "bytes": 1294741
+    }
+  ],
+  "note": "This manifest inventories files copied byte-for-byte from an existing local experiment archive. It is not an independent environment lock."
+}
