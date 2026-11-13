@@ -31,7 +31,7 @@ The `src/mcgc/` package provides compatibility for the original benchmark script
 | Real-data eight-dataset panel | v32c/v33 source scripts, completed local read-only verifier and receipt | All 48 Table 3 cells, 96 seed units and five sign tests checked; full source JSON/JSONL remains local | Verified locally; original source artifacts need repository deposit |
 | PMLB label review | v3.1 strict-OOF source, summary, original locally verified file and tests | Table 4 (24 values), Table 5 (18 means), all 12 denominators, six Holm tests checked | **Verified locally**; original full audit needs repository deposit |
 | Path and feature stability | Source scripts included | Only selected numerical summaries included | Incomplete |
-| Figures | Generation scripts and selected numerical inputs included | Not every final figure data source supplied | Incomplete |
+| Figures and supplementary tables | [Mapped figure and supplement audit](final-figures-supplement-audit.md), selected generators and numerical inputs | Table S2 regression test added; Fig. S6 may reflect old v2.1 per-dataset deltas; S1/S3/S5 raw source not yet deposited | Partial, explicit gaps; no new training required for pending checks |
 
 ## Paper version
 
