@@ -1,0 +1,1326 @@
+{
+  "dataset_metadata": {
+    "credit_approval_australia": {
+      "class_counts": [
+        296,
+        357
+      ],
+      "content_sha256": "d010ed0c644629239c0cf697783ca0987f8125ad994cecbde7321eb0b6f5d093",
+      "loader": "pinned upstream TSV.GZ; dropna=True",
+      "n_classes": 2,
+      "n_features": 15,
+      "n_samples": 653,
+      "original_classes": [
+        "0",
+        "1"
+      ],
+      "pmlb_commit": "7c1f4bdc00136dc2e55c87fa6b8ba6e8af6d1a68"
+    },
+    "credit_approval_germany": {
+      "class_counts": [
+        700,
+        300
+      ],
+      "content_sha256": "86c1ed0d6cfa171818fb182a522902b8a8a7567303fe3a44fbbc47bcf6e743ba",
+      "loader": "pinned upstream TSV.GZ; dropna=True",
+      "n_classes": 2,
+      "n_features": 20,
+      "n_samples": 1000,
+      "original_classes": [
+        "0",
+        "1"
+      ],
+      "pmlb_commit": "7c1f4bdc00136dc2e55c87fa6b8ba6e8af6d1a68"
+    },
+    "dermatology": {
+      "class_counts": [
+        112,
+        61,
+        72,
+        49,
+        52,
+        20
+      ],
+      "content_sha256": "5bbbcdacc0ce76316e01eda04dcb3eedaa2d31c20ca4ed6490ece8aa4f1adb41",
+      "loader": "pinned upstream TSV.GZ; dropna=True",
+      "n_classes": 6,
+      "n_features": 34,
+      "n_samples": 366,
+      "original_classes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "pmlb_commit": "7c1f4bdc00136dc2e55c87fa6b8ba6e8af6d1a68"
+    },
+    "haberman": {
+      "class_counts": [
+        225,
+        81
+      ],
+      "content_sha256": "b9f07c2425cb1a0657490680385c8fd2681725d1effb99bb42d674ce8075281b",
+      "loader": "pinned upstream TSV.GZ; dropna=True",
+      "n_classes": 2,
+      "n_features": 3,
+      "n_samples": 306,
+      "original_classes": [
+        "1",
+        "2"
+      ],
+      "pmlb_commit": "7c1f4bdc00136dc2e55c87fa6b8ba6e8af6d1a68"
+    },
+    "heart_disease_cleveland": {
+      "class_counts": [
+        160,
+        137
+      ],
+      "content_sha256": "28b7a5120da5e40f70fdb9956629149d806030a80d5074d2471f80a5b93d8019",
+      "loader": "pinned upstream TSV.GZ; dropna=True",
+      "n_classes": 2,
+      "n_features": 13,
+      "n_samples": 297,
+      "original_classes": [
+        "0",
+        "1"
+      ],
+      "pmlb_commit": "7c1f4bdc00136dc2e55c87fa6b8ba6e8af6d1a68"
+    },
+    "ionosphere": {
+      "class_counts": [
+        126,
+        225
+      ],
+      "content_sha256": "539720938c27af1bc09f3ce75f269cfbad7699a59c7f21ee05145ed76a3427e4",
+      "loader": "pinned upstream TSV.GZ; dropna=True",
+      "n_classes": 2,
+      "n_features": 34,
+      "n_samples": 351,
+      "original_classes": [
+        "0",
+        "1"
+      ],
+      "pmlb_commit": "7c1f4bdc00136dc2e55c87fa6b8ba6e8af6d1a68"
+    },
+    "penguins": {
+      "class_counts": [
+        146,
+        68,
+        119
+      ],
+      "content_sha256": "5d17ba0bb38d178c81220e2af9c8ab009433b13ae1bf6052af9257155ac1ac82",
+      "loader": "pinned upstream TSV.GZ; dropna=True",
+      "n_classes": 3,
+      "n_features": 7,
+      "n_samples": 333,
+      "original_classes": [
+        "0",
+        "1",
+        "2"
+      ],
+      "pmlb_commit": "7c1f4bdc00136dc2e55c87fa6b8ba6e8af6d1a68"
+    },
+    "segmentation": {
+      "class_counts": [
+        330,
+        330,
+        330,
+        330,
+        330,
+        330,
+        330
+      ],
+      "content_sha256": "1ea12f4c2644b91258d6e4d519ab3bb830e336b0d7032171902a918538eeca61",
+      "loader": "pinned upstream TSV.GZ; dropna=True",
+      "n_classes": 7,
+      "n_features": 19,
+      "n_samples": 2310,
+      "original_classes": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "pmlb_commit": "7c1f4bdc00136dc2e55c87fa6b8ba6e8af6d1a68"
+    }
+  },
+  "environment": {
+    "logical_cpu_count": 12,
+    "machine": "AMD64",
+    "numpy": "2.5.4",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD",
+    "python": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]",
+    "rf_n_jobs": 1,
+    "scikit_learn": "1.9.1",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "timer": "time.perf_counter wall-clock seconds"
+  },
+  "predictive_descriptive_on_runtime_seeds": {
+    "dataset_level": {
+      "tuned_vs_baselines": {
+        "scaled_tuned_knn_confidence": {
+          "losses": 2,
+          "max": 0.013278124676982715,
+          "mean": 0.003809601396176991,
+          "median": 0.0025598466346803384,
+          "min": -0.0017537315421856103,
+          "n": 8,
+          "sign_test_p_two_sided": 0.453125,
+          "std": 0.00531285804943883,
+          "ties": 1,
+          "wins": 5
+        },
+        "scaled_tuned_label_spreading_confidence": {
+          "losses": 1,
+          "max": 0.010232623213212916,
+          "mean": 0.0039914682860955845,
+          "median": 0.003588229625612477,
+          "min": -0.0000202020202020202,
+          "n": 8,
+          "sign_test_p_two_sided": 0.0703125,
+          "std": 0.0034677417858957663,
+          "ties": 0,
+          "wins": 7
+        },
+        "tuned_random_forest_confidence": {
+          "losses": 7,
+          "max": 0.0001653912948793191,
+          "mean": -0.010794133814681663,
+          "median": -0.007410276793067449,
+          "min": -0.03487571561613765,
+          "n": 8,
+          "sign_test_p_two_sided": 0.0703125,
+          "std": 0.011541291746337164,
+          "ties": 0,
+          "wins": 1
+        },
+        "tuned_rbf_svm_confidence": {
+          "losses": 5,
+          "max": 0.02174898941075195,
+          "mean": -0.001454852448221538,
+          "median": -0.0003294541700807141,
+          "min": -0.028485836552714718,
+          "n": 8,
+          "sign_test_p_two_sided": 0.7265625,
+          "std": 0.01608738460167747,
+          "ties": 0,
+          "wins": 3
+        }
+      },
+      "tuned_vs_fixed": {
+        "losses": 2,
+        "max": 0.028400589638521385,
+        "mean": 0.004989098969174148,
+        "median": 0.0017930670691795624,
+        "min": -0.0013487191545642485,
+        "n": 8,
+        "sign_test_p_two_sided": 0.2890625,
+        "std": 0.00970762680568085,
+        "ties": 0,
+        "wins": 6
+      }
+    },
+    "note": "descriptive five-seed runtime subset; full predictive matched-tuning evidence is v3.3 with 12 seeds",
+    "parameter_selection_frequencies": {
+      "K=08|alpha=0.50|nD=020": 17,
+      "K=08|alpha=0.75|nD=020": 2,
+      "K=08|alpha=0.85|nD=020": 2,
+      "K=12|alpha=0.50|nD=020": 1,
+      "K=12|alpha=0.75|nD=020": 2,
+      "K=12|alpha=0.85|nD=020": 1,
+      "K=12|alpha=0.85|nD=040": 1,
+      "K=17|alpha=0.50|nD=020": 6,
+      "K=17|alpha=0.75|nD=020": 1,
+      "K=17|alpha=0.85|nD=020": 1,
+      "K=25|alpha=0.50|nD=020": 2,
+      "K=25|alpha=0.75|nD=020": 4
+    },
+    "per_dataset": [
+      {
+        "baseline_mean_eaurc": {
+          "scaled_tuned_knn_confidence": 0.050153232941679594,
+          "scaled_tuned_label_spreading_confidence": 0.05540692266307856,
+          "tuned_random_forest_confidence": 0.035070904998506854,
+          "tuned_rbf_svm_confidence": 0.04081599606728984
+        },
+        "dataset": "credit_approval_australia",
+        "fixed_cgec_mean_eaurc": 0.05623199164377883,
+        "improvement_tuned_over_fixed": 0.004325027159913626,
+        "tuned_cgec_mean_eaurc": 0.051906964483865205
+      },
+      {
+        "baseline_mean_eaurc": {
+          "scaled_tuned_knn_confidence": 0.09763899113573134,
+          "scaled_tuned_label_spreading_confidence": 0.10298950222943382,
+          "tuned_random_forest_confidence": 0.08571458514378275,
+          "tuned_rbf_svm_confidence": 0.08054031141966209
+        },
+        "dataset": "credit_approval_germany",
+        "fixed_cgec_mean_eaurc": 0.09754379132821053,
+        "improvement_tuned_over_fixed": 0.004786912311989633,
+        "tuned_cgec_mean_eaurc": 0.0927568790162209
+      },
+      {
+        "baseline_mean_eaurc": {
+          "scaled_tuned_knn_confidence": 0.006306246799305198,
+          "scaled_tuned_label_spreading_confidence": 0.004095529227994877,
+          "tuned_random_forest_confidence": 0.0010626730618535632,
+          "tuned_rbf_svm_confidence": 0.0014295613569688219
+        },
+        "dataset": "dermatology",
+        "fixed_cgec_mean_eaurc": 0.0022715193765059333,
+        "improvement_tuned_over_fixed": 0.0002034578426409893,
+        "tuned_cgec_mean_eaurc": 0.002068061533864944
+      },
+      {
+        "baseline_mean_eaurc": {
+          "scaled_tuned_knn_confidence": 0.10679729629318871,
+          "scaled_tuned_label_spreading_confidence": 0.11022043434310298,
+          "tuned_random_forest_confidence": 0.09036404875925516,
+          "tuned_rbf_svm_confidence": 0.12214540045064022
+        },
+        "dataset": "haberman",
+        "fixed_cgec_mean_eaurc": 0.10456706913470404,
+        "improvement_tuned_over_fixed": -0.0013487191545642485,
+        "tuned_cgec_mean_eaurc": 0.10591578828926829
+      },
+      {
+        "baseline_mean_eaurc": {
+          "scaled_tuned_knn_confidence": 0.05749570881939882,
+          "scaled_tuned_label_spreading_confidence": 0.051613866342766254,
+          "tuned_random_forest_confidence": 0.040159105557057914,
+          "tuned_rbf_svm_confidence": 0.06968635468150661
+        },
+        "dataset": "heart_disease_cleveland",
+        "fixed_cgec_mean_eaurc": 0.048660654867232714,
+        "improvement_tuned_over_fixed": 0.0007232895964780564,
+        "tuned_cgec_mean_eaurc": 0.04793736527075466
+      },
+      {
+        "baseline_mean_eaurc": {
+          "scaled_tuned_knn_confidence": 0.05565031305657375,
+          "scaled_tuned_label_spreading_confidence": 0.04999956691635087,
+          "tuned_random_forest_confidence": 0.00749647276345339,
+          "tuned_rbf_svm_confidence": 0.013886351826876319
+        },
+        "dataset": "ionosphere",
+        "fixed_cgec_mean_eaurc": 0.07077277801811242,
+        "improvement_tuned_over_fixed": 0.028400589638521385,
+        "tuned_cgec_mean_eaurc": 0.04237218837959104
+      },
+      {
+        "baseline_mean_eaurc": {
+          "scaled_tuned_knn_confidence": 0.00004061018346732633,
+          "scaled_tuned_label_spreading_confidence": 0.00002040816326530612,
+          "tuned_random_forest_confidence": 0.00020600147834664542,
+          "tuned_rbf_svm_confidence": 0.000020202020202020206
+        },
+        "dataset": "penguins",
+        "fixed_cgec_mean_eaurc": 0,
+        "improvement_tuned_over_fixed": -0.00004061018346732632,
+        "tuned_cgec_mean_eaurc": 0.00004061018346732632
+      },
+      {
+        "baseline_mean_eaurc": {
+          "scaled_tuned_knn_confidence": 0.0034919195926814825,
+          "scaled_tuned_label_spreading_confidence": 0.004683024055382304,
+          "tuned_random_forest_confidence": 0.0006706453729007287,
+          "tuned_rbf_svm_confidence": 0.006934510243692074
+        },
+        "dataset": "segmentation",
+        "fixed_cgec_mean_eaurc": 0.006962495037459005,
+        "improvement_tuned_over_fixed": 0.0028628445418810685,
+        "tuned_cgec_mean_eaurc": 0.004099650495577936
+      }
+    ]
+  },
+  "protocol": {
+    "cgec_fixed": "K=12, alpha=0.85, nD=40",
+    "cgec_tuning_grid": {
+      "K": [
+        8,
+        12,
+        17,
+        25
+      ],
+      "alpha": [
+        0.5,
+        0.75,
+        0.85
+      ],
+      "nD": [
+        20,
+        40,
+        80
+      ],
+      "n_candidates": 36
+    },
+    "datasets": [
+      "credit_approval_australia",
+      "credit_approval_germany",
+      "dermatology",
+      "haberman",
+      "heart_disease_cleveland",
+      "ionosphere",
+      "penguins",
+      "segmentation"
+    ],
+    "inner_cv": "3-fold stratified on outer training only, random_state=6000+seed",
+    "n_dataset_seed_units": 40,
+    "name": "self-contained medium descriptive runtime audit",
+    "outer_split": "70/30 stratified, random_state=5000+seed",
+    "predictive_inference": "not primary; full matched-tuning predictive evidence remains v3.3 over 12 seeds",
+    "rf_n_jobs": 1,
+    "seeds": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "selection_metric": "lowest OOF E-AURC; higher accuracy then lexical candidate key",
+    "self_contained": true,
+    "single_thread_policy": true,
+    "timing_repeats_final_model": 3,
+    "version": "v3.6b"
+  },
+  "runtime": {
+    "interpretation": {
+      "baselines": "existing inner-CV tuning + final refit + test prediction",
+      "fixed_cgec": "fit+test prediction only; no tuning",
+      "selected_final_model": "median of three fresh fit+prediction repetitions; excludes tuning",
+      "tuned_cgec": "36-candidate inner-CV tuning + final refit + test prediction"
+    },
+    "panel_all_dataset_seed_units": {
+      "end_to_end_or_fixed_final_model": {
+        "baseline::scaled_tuned_knn_confidence": {
+          "max": 0.10807330000000093,
+          "mean": 0.05354865500000017,
+          "median": 0.04389605000000074,
+          "min": 0.037159400000064124,
+          "n": 40,
+          "std": 0.02174347886633022
+        },
+        "baseline::scaled_tuned_label_spreading_confidence": {
+          "max": 0.4963339000000815,
+          "mean": 0.1794242999999966,
+          "median": 0.1147040999999831,
+          "min": 0.09867689999998674,
+          "n": 40,
+          "std": 0.12000665341256808
+        },
+        "baseline::tuned_random_forest_confidence": {
+          "max": 21.862709799999948,
+          "mean": 9.603757047500006,
+          "median": 7.820843899999971,
+          "min": 6.576661000000001,
+          "n": 40,
+          "std": 4.650615939233856
+        },
+        "baseline::tuned_rbf_svm_confidence": {
+          "max": 1.0109934999999268,
+          "mean": 0.2190135850000047,
+          "median": 0.08462965000009604,
+          "min": 0.05170859999998356,
+          "n": 40,
+          "std": 0.30398662945454974
+        },
+        "fixed_cgec": {
+          "max": 0.2850363000000016,
+          "mean": 0.06762776000001196,
+          "median": 0.03548395000007076,
+          "min": 0.020464299999957802,
+          "n": 40,
+          "std": 0.0758703860234419
+        },
+        "tuned_cgec": {
+          "max": 19.289047800000276,
+          "mean": 5.320344427499988,
+          "median": 3.1431985999998346,
+          "min": 1.8335660999997572,
+          "n": 40,
+          "std": 5.299595710653843
+        }
+      },
+      "selected_final_model_fit_plus_prediction": {
+        "baseline::scaled_tuned_knn_confidence": {
+          "max": 0.004129100000000108,
+          "mean": 0.001707639999997923,
+          "median": 0.001138950000040495,
+          "min": 0.0008290000000670261,
+          "n": 40,
+          "std": 0.0010374083089068422
+        },
+        "baseline::scaled_tuned_label_spreading_confidence": {
+          "max": 0.014509199999906741,
+          "mean": 0.004447170000007361,
+          "median": 0.0023943999999005428,
+          "min": 0.0016911999999820182,
+          "n": 40,
+          "std": 0.0037309347473142686
+        },
+        "baseline::tuned_random_forest_confidence": {
+          "max": 0.4377914999998893,
+          "mean": 0.18105127000000606,
+          "median": 0.1417532499999652,
+          "min": 0.12079579999999623,
+          "n": 40,
+          "std": 0.09729700683157051
+        },
+        "baseline::tuned_rbf_svm_confidence": {
+          "max": 0.07116650000000391,
+          "mean": 0.012640880000009246,
+          "median": 0.0031876000000465865,
+          "min": 0.0015522999999575404,
+          "n": 40,
+          "std": 0.02203819785091591
+        },
+        "fixed_cgec": {
+          "max": 0.2850363000000016,
+          "mean": 0.06762776000001196,
+          "median": 0.03548395000007076,
+          "min": 0.020464299999957802,
+          "n": 40,
+          "std": 0.0758703860234419
+        },
+        "tuned_cgec": {
+          "max": 0.23635369999999511,
+          "mean": 0.06352548749999301,
+          "median": 0.0344511000000125,
+          "min": 0.019808200000056786,
+          "n": 40,
+          "std": 0.06449604383516443
+        }
+      }
+    },
+    "per_dataset": {
+      "credit_approval_australia": {
+        "end_to_end_or_fixed_final_model": {
+          "baseline::scaled_tuned_knn_confidence": {
+            "max": 0.06519099999997024,
+            "mean": 0.06373516000002155,
+            "median": 0.06348019999995813,
+            "min": 0.06304600000009941,
+            "n": 5,
+            "std": 0.000835348264461759
+          },
+          "baseline::scaled_tuned_label_spreading_confidence": {
+            "max": 0.2244720000000484,
+            "mean": 0.20458337999999684,
+            "median": 0.19957339999996293,
+            "min": 0.19829939999999624,
+            "n": 5,
+            "std": 0.011159317252083766
+          },
+          "baseline::tuned_random_forest_confidence": {
+            "max": 7.941039899999964,
+            "mean": 7.853394839999998,
+            "median": 7.827195199999949,
+            "min": 7.807211400000028,
+            "n": 5,
+            "std": 0.05606521644176757
+          },
+          "baseline::tuned_rbf_svm_confidence": {
+            "max": 0.14722589999996671,
+            "mean": 0.1416511999999898,
+            "median": 0.14061430000003838,
+            "min": 0.1370387999999707,
+            "n": 5,
+            "std": 0.004224413819080637
+          },
+          "fixed_cgec": {
+            "max": 0.07108209999995552,
+            "mean": 0.06921991999998908,
+            "median": 0.06889320000004773,
+            "min": 0.0679498999999737,
+            "n": 5,
+            "std": 0.0012742617301581816
+          },
+          "tuned_cgec": {
+            "max": 5.947091099999909,
+            "mean": 5.823266499999965,
+            "median": 5.796866700000066,
+            "min": 5.747740100000158,
+            "n": 5,
+            "std": 0.0761010306044182
+          }
+        },
+        "selected_final_model_fit_plus_prediction": {
+          "baseline::scaled_tuned_knn_confidence": {
+            "max": 0.002447099999983493,
+            "mean": 0.0022844199999894955,
+            "median": 0.0022582000000284097,
+            "min": 0.0022017999999661697,
+            "n": 5,
+            "std": 0.0001009366484504582
+          },
+          "baseline::scaled_tuned_label_spreading_confidence": {
+            "max": 0.006644900000026155,
+            "mean": 0.005802680000010696,
+            "median": 0.005808400000034908,
+            "min": 0.0049856999999633445,
+            "n": 5,
+            "std": 0.0005893790860100314
+          },
+          "baseline::tuned_random_forest_confidence": {
+            "max": 0.17069870000000265,
+            "mean": 0.1502065000000016,
+            "median": 0.14533950000003415,
+            "min": 0.14290459999995164,
+            "n": 5,
+            "std": 0.011577816142308685
+          },
+          "baseline::tuned_rbf_svm_confidence": {
+            "max": 0.007982500000025539,
+            "mean": 0.006334500000002663,
+            "median": 0.005977000000029875,
+            "min": 0.00572239999996782,
+            "n": 5,
+            "std": 0.0009315830532103618
+          },
+          "fixed_cgec": {
+            "max": 0.07108209999995552,
+            "mean": 0.06921991999998908,
+            "median": 0.06889320000004773,
+            "min": 0.0679498999999737,
+            "n": 5,
+            "std": 0.0012742617301581816
+          },
+          "tuned_cgec": {
+            "max": 0.07236280000000761,
+            "mean": 0.07009806000000936,
+            "median": 0.06925230000001648,
+            "min": 0.06901980000003505,
+            "n": 5,
+            "std": 0.0014207229684192948
+          }
+        }
+      },
+      "credit_approval_germany": {
+        "end_to_end_or_fixed_final_model": {
+          "baseline::scaled_tuned_knn_confidence": {
+            "max": 0.05416560000003301,
+            "mean": 0.053901040000005195,
+            "median": 0.05396020000006274,
+            "min": 0.0533963999999969,
+            "n": 5,
+            "std": 0.0002978863592116477
+          },
+          "baseline::scaled_tuned_label_spreading_confidence": {
+            "max": 0.20128910000005362,
+            "mean": 0.19480274000002282,
+            "median": 0.19499040000005152,
+            "min": 0.18996490000000676,
+            "n": 5,
+            "std": 0.004220413514476723
+          },
+          "baseline::tuned_random_forest_confidence": {
+            "max": 9.575942400000088,
+            "mean": 9.505963560000032,
+            "median": 9.535883999999953,
+            "min": 9.405814500000076,
+            "n": 5,
+            "std": 0.07108704373484923
+          },
+          "baseline::tuned_rbf_svm_confidence": {
+            "max": 0.28164349999997285,
+            "mean": 0.27974084000001087,
+            "median": 0.2797003000000018,
+            "min": 0.27771210000003066,
+            "n": 5,
+            "std": 0.001544522886839306
+          },
+          "fixed_cgec": {
+            "max": 0.06836359999999786,
+            "mean": 0.06508985999998913,
+            "median": 0.06419340000002194,
+            "min": 0.06392409999995152,
+            "n": 5,
+            "std": 0.001864255184524923
+          },
+          "tuned_cgec": {
+            "max": 5.31985439999994,
+            "mean": 5.296636619999958,
+            "median": 5.296769900000072,
+            "min": 5.2764574000000835,
+            "n": 5,
+            "std": 0.015679406118087068
+          }
+        },
+        "selected_final_model_fit_plus_prediction": {
+          "baseline::scaled_tuned_knn_confidence": {
+            "max": 0.002185699999984081,
+            "mean": 0.002166239999996833,
+            "median": 0.002177700000004279,
+            "min": 0.002112599999975373,
+            "n": 5,
+            "std": 0.00003039478574895967
+          },
+          "baseline::scaled_tuned_label_spreading_confidence": {
+            "max": 0.007284300000037547,
+            "mean": 0.006118200000025808,
+            "median": 0.00684310000002597,
+            "min": 0.004072300000018458,
+            "n": 5,
+            "std": 0.0013899720896440116
+          },
+          "baseline::tuned_random_forest_confidence": {
+            "max": 0.23628250000001572,
+            "mean": 0.18620175999999447,
+            "median": 0.17503790000000663,
+            "min": 0.1626077999999893,
+            "n": 5,
+            "std": 0.0308580859521255
+          },
+          "baseline::tuned_rbf_svm_confidence": {
+            "max": 0.013682800000026418,
+            "mean": 0.0133702800000151,
+            "median": 0.013345700000058969,
+            "min": 0.013193499999999858,
+            "n": 5,
+            "std": 0.00019113349262771584
+          },
+          "fixed_cgec": {
+            "max": 0.06836359999999786,
+            "mean": 0.06508985999998913,
+            "median": 0.06419340000002194,
+            "min": 0.06392409999995152,
+            "n": 5,
+            "std": 0.001864255184524923
+          },
+          "tuned_cgec": {
+            "max": 0.0702153000000294,
+            "mean": 0.06882192000000487,
+            "median": 0.06992389999999205,
+            "min": 0.06418489999998656,
+            "n": 5,
+            "std": 0.0025958313026956453
+          }
+        }
+      },
+      "dermatology": {
+        "end_to_end_or_fixed_final_model": {
+          "baseline::scaled_tuned_knn_confidence": {
+            "max": 0.038553599999943344,
+            "mean": 0.037760039999989205,
+            "median": 0.037772899999993115,
+            "min": 0.037214899999980844,
+            "n": 5,
+            "std": 0.0005096348967416293
+          },
+          "baseline::scaled_tuned_label_spreading_confidence": {
+            "max": 0.13140730000003487,
+            "mean": 0.11173656000001983,
+            "median": 0.10554650000000265,
+            "min": 0.10464380000001938,
+            "n": 5,
+            "std": 0.011363416193351199
+          },
+          "baseline::tuned_random_forest_confidence": {
+            "max": 8.347478499999966,
+            "mean": 7.533978600000012,
+            "median": 7.3118061000000125,
+            "min": 7.264633300000014,
+            "n": 5,
+            "std": 0.46277122202684506
+          },
+          "baseline::tuned_rbf_svm_confidence": {
+            "max": 0.09554090000000315,
+            "mean": 0.09488408000000845,
+            "median": 0.09518100000002505,
+            "min": 0.09409490000001597,
+            "n": 5,
+            "std": 0.0006344335205580054
+          },
+          "fixed_cgec": {
+            "max": 0.024614299999996092,
+            "mean": 0.02412872000001016,
+            "median": 0.02407540000001518,
+            "min": 0.023881200000005265,
+            "n": 5,
+            "std": 0.00030065444782785805
+          },
+          "tuned_cgec": {
+            "max": 2.1606045000001473,
+            "mean": 2.1015894000000457,
+            "median": 2.0899292000000287,
+            "min": 2.0738278000000037,
+            "n": 5,
+            "std": 0.03401356285835347
+          }
+        },
+        "selected_final_model_fit_plus_prediction": {
+          "baseline::scaled_tuned_knn_confidence": {
+            "max": 0.001000299999930121,
+            "mean": 0.0008967799999936687,
+            "median": 0.0009024000000295018,
+            "min": 0.0008290000000670261,
+            "n": 5,
+            "std": 0.00006995685810654672
+          },
+          "baseline::scaled_tuned_label_spreading_confidence": {
+            "max": 0.0025324000000068736,
+            "mean": 0.0020521800000096848,
+            "median": 0.0019566000000281747,
+            "min": 0.0017753999999854386,
+            "n": 5,
+            "std": 0.00029528887890230396
+          },
+          "baseline::tuned_random_forest_confidence": {
+            "max": 0.1372115000000349,
+            "mean": 0.1331609399999934,
+            "median": 0.13273519999995642,
+            "min": 0.13077789999994138,
+            "n": 5,
+            "std": 0.002425597230195114
+          },
+          "baseline::tuned_rbf_svm_confidence": {
+            "max": 0.0033449000000018714,
+            "mean": 0.0032913199999939024,
+            "median": 0.0032786999999530053,
+            "min": 0.0032423000000108004,
+            "n": 5,
+            "std": 0.000041523029752218466
+          },
+          "fixed_cgec": {
+            "max": 0.024614299999996092,
+            "mean": 0.02412872000001016,
+            "median": 0.02407540000001518,
+            "min": 0.023881200000005265,
+            "n": 5,
+            "std": 0.00030065444782785805
+          },
+          "tuned_cgec": {
+            "max": 0.025117899999997917,
+            "mean": 0.02419695999999476,
+            "median": 0.024006399999962014,
+            "min": 0.02340670000000955,
+            "n": 5,
+            "std": 0.0006651968265178304
+          }
+        }
+      },
+      "haberman": {
+        "end_to_end_or_fixed_final_model": {
+          "baseline::scaled_tuned_knn_confidence": {
+            "max": 0.03975009999999202,
+            "mean": 0.03948200000000952,
+            "median": 0.039511599999968894,
+            "min": 0.03920790000000807,
+            "n": 5,
+            "std": 0.000261133768404915
+          },
+          "baseline::scaled_tuned_label_spreading_confidence": {
+            "max": 0.15807639999991352,
+            "mean": 0.11440949999998792,
+            "median": 0.10487940000007256,
+            "min": 0.10110420000000886,
+            "n": 5,
+            "std": 0.024501396977883012
+          },
+          "baseline::tuned_random_forest_confidence": {
+            "max": 6.720129000000043,
+            "mean": 6.673102980000022,
+            "median": 6.701503099999968,
+            "min": 6.576661000000001,
+            "n": 5,
+            "std": 0.060524411738811304
+          },
+          "baseline::tuned_rbf_svm_confidence": {
+            "max": 0.05412709999995968,
+            "mean": 0.05291573999999173,
+            "median": 0.05296820000000935,
+            "min": 0.05170859999998356,
+            "n": 5,
+            "std": 0.0008892032405384008
+          },
+          "fixed_cgec": {
+            "max": 0.04458840000006603,
+            "mean": 0.03380726000003733,
+            "median": 0.031219900000053258,
+            "min": 0.03050389999998515,
+            "n": 5,
+            "std": 0.006043999209396118
+          },
+          "tuned_cgec": {
+            "max": 2.7719570999997813,
+            "mean": 2.7156518599999915,
+            "median": 2.7230195000001913,
+            "min": 2.6706355999999687,
+            "n": 5,
+            "std": 0.04025811340323946
+          }
+        },
+        "selected_final_model_fit_plus_prediction": {
+          "baseline::scaled_tuned_knn_confidence": {
+            "max": 0.0010990999999194173,
+            "mean": 0.000989999999990232,
+            "median": 0.0009710999999583692,
+            "min": 0.0009177000000590851,
+            "n": 5,
+            "std": 0.00007053141140086415
+          },
+          "baseline::scaled_tuned_label_spreading_confidence": {
+            "max": 0.0024076999999351756,
+            "mean": 0.0020358199999918726,
+            "median": 0.0019787000000519583,
+            "min": 0.001851800000054027,
+            "n": 5,
+            "std": 0.0002248482087509151
+          },
+          "baseline::tuned_random_forest_confidence": {
+            "max": 0.12844810000001416,
+            "mean": 0.12391996000000063,
+            "median": 0.12379869999995208,
+            "min": 0.12079579999999623,
+            "n": 5,
+            "std": 0.0030420049865245453
+          },
+          "baseline::tuned_rbf_svm_confidence": {
+            "max": 0.002124999999978172,
+            "mean": 0.0019403599999918697,
+            "median": 0.001956100000029437,
+            "min": 0.0018079999999827123,
+            "n": 5,
+            "std": 0.0001248257305138048
+          },
+          "fixed_cgec": {
+            "max": 0.04458840000006603,
+            "mean": 0.03380726000003733,
+            "median": 0.031219900000053258,
+            "min": 0.03050389999998515,
+            "n": 5,
+            "std": 0.006043999209396118
+          },
+          "tuned_cgec": {
+            "max": 0.03265499999986332,
+            "mean": 0.03113253999997596,
+            "median": 0.03107630000010886,
+            "min": 0.030271199999958753,
+            "n": 5,
+            "std": 0.0009798721946934034
+          }
+        }
+      },
+      "heart_disease_cleveland": {
+        "end_to_end_or_fixed_final_model": {
+          "baseline::scaled_tuned_knn_confidence": {
+            "max": 0.04706290000001445,
+            "mean": 0.04498009999999795,
+            "median": 0.04480599999999413,
+            "min": 0.04381999999998243,
+            "n": 5,
+            "std": 0.001303605674662976
+          },
+          "baseline::scaled_tuned_label_spreading_confidence": {
+            "max": 0.1122646999999688,
+            "mean": 0.11146947999998247,
+            "median": 0.11173269999994773,
+            "min": 0.10982790000002751,
+            "n": 5,
+            "std": 0.0009909775183848195
+          },
+          "baseline::tuned_random_forest_confidence": {
+            "max": 8.64366640000003,
+            "mean": 7.3622744800000195,
+            "median": 7.031841200000031,
+            "min": 6.931305100000031,
+            "n": 5,
+            "std": 0.7231179277802388
+          },
+          "baseline::tuned_rbf_svm_confidence": {
+            "max": 0.06596109999998134,
+            "mean": 0.06213582000004862,
+            "median": 0.062406900000155474,
+            "min": 0.05942570000001979,
+            "n": 5,
+            "std": 0.0026251376605604185
+          },
+          "fixed_cgec": {
+            "max": 0.03143920000002254,
+            "mean": 0.03109885999999733,
+            "median": 0.03123649999997724,
+            "min": 0.030481199999940145,
+            "n": 5,
+            "std": 0.0003689271039362528
+          },
+          "tuned_cgec": {
+            "max": 3.463100399999803,
+            "mean": 2.8530497599998625,
+            "median": 2.7289205999996966,
+            "min": 2.6453880000000254,
+            "n": 5,
+            "std": 0.3433137944557592
+          }
+        },
+        "selected_final_model_fit_plus_prediction": {
+          "baseline::scaled_tuned_knn_confidence": {
+            "max": 0.0012974999998505155,
+            "mean": 0.0012137799999891285,
+            "median": 0.0011968000000024404,
+            "min": 0.0011319999999841457,
+            "n": 5,
+            "std": 0.00007979465515664687
+          },
+          "baseline::scaled_tuned_label_spreading_confidence": {
+            "max": 0.002543300000070303,
+            "mean": 0.002401860000054512,
+            "median": 0.0023577000000614134,
+            "min": 0.002286800000092626,
+            "n": 5,
+            "std": 0.00010374566497849907
+          },
+          "baseline::tuned_random_forest_confidence": {
+            "max": 0.13042610000002242,
+            "mean": 0.12711136000002626,
+            "median": 0.12610110000002805,
+            "min": 0.12501229999998031,
+            "n": 5,
+            "std": 0.0022815727203031578
+          },
+          "baseline::tuned_rbf_svm_confidence": {
+            "max": 0.0026102999999011445,
+            "mean": 0.0023855599999933474,
+            "median": 0.00238830000012058,
+            "min": 0.002093599999852813,
+            "n": 5,
+            "std": 0.00021014520698804776
+          },
+          "fixed_cgec": {
+            "max": 0.03143920000002254,
+            "mean": 0.03109885999999733,
+            "median": 0.03123649999997724,
+            "min": 0.030481199999940145,
+            "n": 5,
+            "std": 0.0003689271039362528
+          },
+          "tuned_cgec": {
+            "max": 0.0379085000000714,
+            "mean": 0.03292944000002081,
+            "median": 0.0318533000000798,
+            "min": 0.030314999999859538,
+            "n": 5,
+            "std": 0.0031884367311029783
+          }
+        }
+      },
+      "ionosphere": {
+        "end_to_end_or_fixed_final_model": {
+          "baseline::scaled_tuned_knn_confidence": {
+            "max": 0.04314990000000307,
+            "mean": 0.039669479999997745,
+            "median": 0.03946320000000014,
+            "min": 0.037159400000064124,
+            "n": 5,
+            "std": 0.002588627380863851
+          },
+          "baseline::scaled_tuned_label_spreading_confidence": {
+            "max": 0.10811809999995603,
+            "mean": 0.10341169999996964,
+            "median": 0.1036923999999999,
+            "min": 0.09867689999998674,
+            "n": 5,
+            "std": 0.004072181303061203
+          },
+          "baseline::tuned_random_forest_confidence": {
+            "max": 9.113777800000094,
+            "mean": 9.023079720000009,
+            "median": 9.050980999999979,
+            "min": 8.910121900000036,
+            "n": 5,
+            "std": 0.09545167869570152
+          },
+          "baseline::tuned_rbf_svm_confidence": {
+            "max": 0.0751644000001761,
+            "mean": 0.0700318199999856,
+            "median": 0.0671809000000394,
+            "min": 0.06642429999988053,
+            "n": 5,
+            "std": 0.004448127376525041
+          },
+          "fixed_cgec": {
+            "max": 0.02092310000011821,
+            "mean": 0.020743720000018583,
+            "median": 0.02085429999999633,
+            "min": 0.020464299999957802,
+            "n": 5,
+            "std": 0.00021539742803541127
+          },
+          "tuned_cgec": {
+            "max": 1.8580580000000282,
+            "mean": 1.8477752199999942,
+            "median": 1.8493901999999025,
+            "min": 1.8335660999997572,
+            "n": 5,
+            "std": 0.009781803938067967
+          }
+        },
+        "selected_final_model_fit_plus_prediction": {
+          "baseline::scaled_tuned_knn_confidence": {
+            "max": 0.0013742999999521999,
+            "mean": 0.0010126400000217473,
+            "median": 0.0009459999999990032,
+            "min": 0.0008604000000786982,
+            "n": 5,
+            "std": 0.0002059393429707351
+          },
+          "baseline::scaled_tuned_label_spreading_confidence": {
+            "max": 0.002040600000100312,
+            "mean": 0.0018310600000177146,
+            "median": 0.0018095000000357686,
+            "min": 0.0016911999999820182,
+            "n": 5,
+            "std": 0.00012880267082354864
+          },
+          "baseline::tuned_random_forest_confidence": {
+            "max": 0.17012309999995523,
+            "mean": 0.16439278000000285,
+            "median": 0.1630044999999427,
+            "min": 0.16058860000009645,
+            "n": 5,
+            "std": 0.0036268104770895283
+          },
+          "baseline::tuned_rbf_svm_confidence": {
+            "max": 0.0031329000000823726,
+            "mean": 0.0028034000000388914,
+            "median": 0.00291980000008607,
+            "min": 0.0023410000000012587,
+            "n": 5,
+            "std": 0.00030558343380655313
+          },
+          "fixed_cgec": {
+            "max": 0.02092310000011821,
+            "mean": 0.020743720000018583,
+            "median": 0.02085429999999633,
+            "min": 0.020464299999957802,
+            "n": 5,
+            "std": 0.00021539742803541127
+          },
+          "tuned_cgec": {
+            "max": 0.020726700000068377,
+            "mean": 0.020315879999998288,
+            "median": 0.020586699999967095,
+            "min": 0.019808200000056786,
+            "n": 5,
+            "std": 0.0004612988640978408
+          }
+        }
+      },
+      "penguins": {
+        "end_to_end_or_fixed_final_model": {
+          "baseline::scaled_tuned_knn_confidence": {
+            "max": 0.04443649999996069,
+            "mean": 0.042902699999967805,
+            "median": 0.04316039999991972,
+            "min": 0.04140989999996236,
+            "n": 5,
+            "std": 0.0011484975859778516
+          },
+          "baseline::scaled_tuned_label_spreading_confidence": {
+            "max": 0.1362924000000021,
+            "mean": 0.11936915999999656,
+            "median": 0.1171434999999974,
+            "min": 0.10888669999997092,
+            "n": 5,
+            "std": 0.01123651807471856
+          },
+          "baseline::tuned_random_forest_confidence": {
+            "max": 7.729103399999985,
+            "mean": 7.371540559999971,
+            "median": 7.343584399999941,
+            "min": 7.122404299999971,
+            "n": 5,
+            "std": 0.255300432267008
+          },
+          "baseline::tuned_rbf_svm_confidence": {
+            "max": 0.06261250000000018,
+            "mean": 0.059905219999996005,
+            "median": 0.061039400000026944,
+            "min": 0.056364499999972395,
+            "n": 5,
+            "std": 0.0029509222909061376
+          },
+          "fixed_cgec": {
+            "max": 0.03804220000006353,
+            "mean": 0.036570100000062666,
+            "median": 0.036529100000052495,
+            "min": 0.03466400000002068,
+            "n": 5,
+            "std": 0.0012671046227642631
+          },
+          "tuned_cgec": {
+            "max": 3.450030499999457,
+            "mean": 3.231274339999959,
+            "median": 3.198033200000168,
+            "min": 3.12785289999988,
+            "n": 5,
+            "std": 0.12750741133131174
+          }
+        },
+        "selected_final_model_fit_plus_prediction": {
+          "baseline::scaled_tuned_knn_confidence": {
+            "max": 0.0011029999999436768,
+            "mean": 0.0010532999999895765,
+            "median": 0.0010389999999915744,
+            "min": 0.0010108000000172979,
+            "n": 5,
+            "std": 0.00003600985971496115
+          },
+          "baseline::scaled_tuned_label_spreading_confidence": {
+            "max": 0.002425800000082745,
+            "mean": 0.002277319999984684,
+            "median": 0.002360399999929541,
+            "min": 0.0020195000000740038,
+            "n": 5,
+            "std": 0.00016748088544020154
+          },
+          "baseline::tuned_random_forest_confidence": {
+            "max": 0.14060189999997874,
+            "mean": 0.13522950000001402,
+            "median": 0.13289029999998547,
+            "min": 0.13214400000003934,
+            "n": 5,
+            "std": 0.003930815831983879
+          },
+          "baseline::tuned_rbf_svm_confidence": {
+            "max": 0.0016593000001421387,
+            "mean": 0.0016137200000230223,
+            "median": 0.0016286000000036438,
+            "min": 0.0015522999999575404,
+            "n": 5,
+            "std": 0.00004290148020535697
+          },
+          "fixed_cgec": {
+            "max": 0.03804220000006353,
+            "mean": 0.036570100000062666,
+            "median": 0.036529100000052495,
+            "min": 0.03466400000002068,
+            "n": 5,
+            "std": 0.0012671046227642631
+          },
+          "tuned_cgec": {
+            "max": 0.03712960000007115,
+            "mean": 0.03551997999998093,
+            "median": 0.03531299999986004,
+            "min": 0.03419850000000224,
+            "n": 5,
+            "std": 0.0011818144004208254
+          }
+        }
+      },
+      "segmentation": {
+        "end_to_end_or_fixed_final_model": {
+          "baseline::scaled_tuned_knn_confidence": {
+            "max": 0.10807330000000093,
+            "mean": 0.10595872000001236,
+            "median": 0.10576879999996436,
+            "min": 0.1042082000000164,
+            "n": 5,
+            "std": 0.0014853410338931086
+          },
+          "baseline::scaled_tuned_label_spreading_confidence": {
+            "max": 0.4963339000000815,
+            "mean": 0.47561187999999677,
+            "median": 0.4707004000000552,
+            "min": 0.467521099999999,
+            "n": 5,
+            "std": 0.01185646255119068
+          },
+          "baseline::tuned_random_forest_confidence": {
+            "max": 21.862709799999948,
+            "mean": 21.506721639999977,
+            "median": 21.538687399999958,
+            "min": 21.142020300000013,
+            "n": 5,
+            "std": 0.29745613411312044
+          },
+          "baseline::tuned_rbf_svm_confidence": {
+            "max": 1.0109934999999268,
+            "mean": 0.9908439600000065,
+            "median": 0.9805880000000116,
+            "min": 0.9762137000000166,
+            "n": 5,
+            "std": 0.016687570649218626
+          },
+          "fixed_cgec": {
+            "max": 0.2850363000000016,
+            "mean": 0.2603636399999914,
+            "median": 0.2550496999999723,
+            "min": 0.24794989999998052,
+            "n": 5,
+            "std": 0.014803488476651376
+          },
+          "tuned_cgec": {
+            "max": 19.289047800000276,
+            "mean": 18.693511720000128,
+            "median": 18.462100099999702,
+            "min": 18.236417900000333,
+            "n": 5,
+            "std": 0.5046670863505178
+          }
+        },
+        "selected_final_model_fit_plus_prediction": {
+          "baseline::scaled_tuned_knn_confidence": {
+            "max": 0.004129100000000108,
+            "mean": 0.004043960000012703,
+            "median": 0.004080099999896447,
+            "min": 0.0038643999999976586,
+            "n": 5,
+            "std": 0.00010413571914041122
+          },
+          "baseline::scaled_tuned_label_spreading_confidence": {
+            "max": 0.014509199999906741,
+            "mean": 0.013058239999963916,
+            "median": 0.012749600000006467,
+            "min": 0.012578100000041559,
+            "n": 5,
+            "std": 0.0008143608370652632
+          },
+          "baseline::tuned_random_forest_confidence": {
+            "max": 0.4377914999998893,
+            "mean": 0.42818736000001534,
+            "median": 0.42727480000007745,
+            "min": 0.4204531999999972,
+            "n": 5,
+            "std": 0.006504628862017585
+          },
+          "baseline::tuned_rbf_svm_confidence": {
+            "max": 0.07116650000000391,
+            "mean": 0.06938790000001518,
+            "median": 0.06962720000001354,
+            "min": 0.0674652000000151,
+            "n": 5,
+            "std": 0.0013620013656262448
+          },
+          "fixed_cgec": {
+            "max": 0.2850363000000016,
+            "mean": 0.2603636399999914,
+            "median": 0.2550496999999723,
+            "min": 0.24794989999998052,
+            "n": 5,
+            "std": 0.014803488476651376
+          },
+          "tuned_cgec": {
+            "max": 0.23635369999999511,
+            "mean": 0.22518911999995908,
+            "median": 0.22385399999996025,
+            "min": 0.21926409999991847,
+            "n": 5,
+            "std": 0.00693789776966661
+          }
+        }
+      }
+    }
+  }
+}
