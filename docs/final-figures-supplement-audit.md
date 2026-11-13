@@ -24,7 +24,7 @@
 | Fig. S2 — spiral path | `fig_spiral_evidence.py`, `provenance/spiral_query.json` | Script can regenerate an illustrative case; final placed figure source absent | Archive publication plot source from original manuscript project |
 | Fig. S3 — wine feature magnitudes | `wine/source_wine_seed0/wine_oof_feature_interventions.csv` | Raw seed-0 intervention data available; standalone figure generator not yet tracked | Retain the plotting source or plot-ready aggregation |
 | Fig. S4 — wine oriented interventions by grade | Wine seed-0 OOF intervention and grade records | Seed-0 source available; standalone figure generator not yet tracked | Archive exact plotting source |
-| Fig. S5 — Wine conditional adjacency null | Original seed-0 `wine_oof_scores.csv` (1599 records) | **Independent recalculation matches PDF:** 69/80 and 133/160 adjacent suggestions; exact conditional p≈0.272612 and 0.510537 | Run [`scripts/verify_wine_s5_conditional_null.py`](../scripts/verify_wine_s5_conditional_null.py) and commit receipt; original plot-building source still missing |
+| Fig. S5 — Wine conditional adjacency null | Original seed-0 `wine_oof_scores.csv` (1599 records), [local PASS receipt](../reproductions/supplement_s5_wine/verification_receipt.json) | **Closed numerically:** 69/80 and 133/160 adjacent suggestions; exact conditional p=0.272612 and 0.510537 | No new numerics; final plotted asset still needs Overleaf source/archive review |
 | **Fig. S6 — PMLB dataset deltas** | Original v3.1 full JSON, `fig_s6_v31_summary.json`, and revised GitHub PDF/PNG | **Verified mismatch fixed in regenerated image:** 6/24 plotted three-decimal labels differed from the old v2.1 summary; sign tests remain 10/12 wins | **Visually approve revised PDF and replace the old Fig. S6 in Overleaf** |
 | Fig. S7 — breast-cancer interventions | `fig_bc_interventions.py`, `results/bc_interventions_summary.json`, archived five-seed feature-stability reproduction | Numerical stability result reproduced; plot script exists | Retain final placed figure asset; no fresh seed sweep |
 
@@ -125,7 +125,7 @@ git commit -m "repro: archive exact Wine Figure S5 conditional null"
 git push origin main
 ```
 
-The repeatable [verifier](../scripts/verify_wine_s5_conditional_null.py) and [test](../tests/test_supplementary_wine_s5.py) are now in the repository; the result still awaits the user's local run/receipt and the final plot source remains distinct from the numerical reproducibility proof.
+The repeatable [verifier](../scripts/verify_wine_s5_conditional_null.py), [test](../tests/test_supplementary_wine_s5.py), and SHA-256 [PASS receipt](../reproductions/supplement_s5_wine/verification_receipt.json) are now in the repository (commit `742b4da33bb739bee4d2a3a1748e4f8f6f369130`). The user executed the verifier locally and uploaded the receipt with SHA-256 `b613d38b76bcf562caf04f4a6146392f9c0005010691ef4f1d950ccdf328a7ae`. Original plot source remains a separate release-item; the published S5 numerical values require no alteration.
 
 ## Remaining evidence-first search
 
@@ -137,4 +137,4 @@ Get-ChildItem "C:\Articles\Clanci\MCGC-new-repo" -Recurse -File |
   Select-Object FullName,Length
 ```
 
-**Release gate:** Tables 3–5, Table S1, Wine seed-0 and feature stability are supported by deposited numerical sources. Fig. S5's exact within-grade null has been independently reconstructed from the deposited OOF CSV; local test/receipt remains to be run. Revised Fig. S6 PDF/PNG is committed, awaiting visual approval and Overleaf replacement. **Table S3's 40-unit timing records are still missing**: its wall-clock measurements cannot be reconstructed solely from predictive checkpoints. Final figure assets also need archival review.
+**Release gate:** Tables 3–5 and S1, Wine seed-0 and feature stability are supported by deposited numerical sources; Fig. S5's exact within-grade null has a locally run PASS audit and committed receipt. Revised Fig. S6 PDF/PNG is committed, awaiting visual approval and Overleaf replacement. **Table S3's 40-unit timing records are still missing**; wall-clock measurements cannot be reconstructed solely from predictive checkpoints. Final figure assets and other supporting raw results still need archival review.
